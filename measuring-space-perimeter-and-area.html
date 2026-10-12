@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Class 9 Maths Chapter 6 Measuring Space: Perimeter and Area — formula sheet and exercise-wise solutions on Academix by Tiwari.">
+<title>Measuring Space | Class 9 Maths | Academix by Tiwari</title>
+
+<style>
+:root {
+    --navy: #12345a;
+    --blue: #1769aa;
+    --cyan: #08a6c2;
+    --bg: #f3f8fc;
+    --white: #ffffff;
+    --text: #243447;
+    --muted: #60758a;
+    --green: #e8f8ef;
+    --green-border: #32a66a;
+    --note: #eaf5ff;
+    --border: #d8e5ef;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+header {
+    background: linear-gradient(135deg, var(--navy), var(--blue), var(--cyan));
+    color: white;
+    text-align: center;
+    padding: 28px 16px;
+}
+.brand { font-size: 13px; font-weight: bold; letter-spacing: 2px; }
+header h1 { margin: 7px 0; font-size: clamp(25px, 5vw, 38px); }
+header p { margin: 0; }
+main { max-width: 940px; margin: 24px auto; padding: 0 14px 35px; }
+.back {
+    display: inline-block; margin-bottom: 16px;
+    color: var(--blue); text-decoration: none; font-weight: bold;
+}
+.card {
+    background: white; border: 1px solid var(--border);
+    border-radius: 14px; padding: 20px; margin-bottom: 20px;
+    box-shadow: 0 4px 14px rgba(18,52,90,.05);
+}
+h2 { color: var(--navy); margin-top: 0; border-bottom: 2px solid #e5f0f8; padding-bottom: 8px; }
+h3 { color: var(--blue); }
+.formula {
+    background: #f4f8ff; border: 1px solid #dce8f8;
+    border-radius: 9px; padding: 11px 14px; margin: 10px 0;
+}
+.note {
+    background: var(--note); border-left: 4px solid var(--blue);
+    border-radius: 8px; padding: 12px 14px; margin: 12px 0;
+}
+.answer {
+    background: var(--green); border-left: 4px solid var(--green-border);
+    border-radius: 8px; padding: 11px 14px; margin-top: 12px;
+}
+details {
+    background: white; border: 1px solid var(--border);
+    border-radius: 10px; margin: 12px 0; overflow: hidden;
+}
+summary {
+    padding: 13px 15px; cursor: pointer; font-weight: bold;
+    color: var(--navy); background: #f7fbff;
+}
+summary:hover { background: #edf6ff; }
+.solution { padding: 14px 16px; }
+.math { font-family: Arial, sans-serif; overflow-wrap: anywhere; }
+.small { color: var(--muted); font-size: 14px; }
+footer { background: var(--navy); color: white; text-align: center; padding: 20px; font-size: 14px; }
+@media(max-width:600px) {
+    main { padding: 0 10px 25px; }
+    .card { padding: 15px; }
+    .solution { padding: 12px; }
+}
+</style>
+</head>
+
+<body>
+<header>
+    <div class="brand">ACADEMIX BY TIWARI</div>
+    <h1>Measuring Space</h1>
+    <p>Class 9 Mathematics · Chapter 6</p>
+    <p>Perimeter and Area</p>
+</header>
+
+<main>
+<a class="back" href="index.html">← Back to Academix Home</a>
+
+<section class="card">
+    <h2>Formula Sheet</h2>
+    <p class="small">Keep this section for quick revision before attempting the solutions.</p>
+
+    <h3>Square</h3>
+    <div class="formula">
+        Perimeter = 4 × side<br>
+        Area = side × side = side²
+    </div>
+
+    <h3>Rectangle</h3>
+    <div class="formula">
+        Perimeter = 2 × (length + breadth)<br>
+        Area = length × breadth
+    </div>
+
+    <h3>Triangle</h3>
+    <div class="formula">
+        Perimeter = side 1 + side 2 + side 3<br>
+        Area = ½ × base × height
+    </div>
+
+    <h3>Parallelogram</h3>
+    <div class="formula">
+        Area = base × perpendicular height<br>
+        Perimeter = 2 × (length of one side + length of adjacent side)
+    </div>
+
+    <h3>Circle</h3>
+    <div class="formula">
+        Circumference = 2 × π × radius<br>
+        Area = π × radius × radius = πr²<br>
+        Diameter = 2 × radius
+    </div>
+
+    <h3>Arc and Sector</h3>
+    <div class="formula">
+        Arc length = (θ ÷ 360°) × 2πr<br>
+        Sector area = (θ ÷ 360°) × πr²<br>
+        Sector perimeter = arc length + 2r
+    </div>
+
+    <h3>Trapezium</h3>
+    <div class="formula">
+        Area = ½ × (sum of parallel sides) × height
+    </div>
+
+    <h3>Heron's Formula</h3>
+    <div class="formula">
+        Semi-perimeter: s = (a + b + c) ÷ 2<br>
+        Area = √[s × (s − a) × (s − b) × (s − c)]
+    </div>
+
+    <h3>Cyclic Quadrilateral</h3>
+    <div class="formula">
+        Semi-perimeter: s = (a + b + c + d) ÷ 2<br>
+        Brahmagupta's formula:<br>
+        Area = √[(s − a)(s − b)(s − c)(s − d)]
+    </div>
+
+    <h3>Units</h3>
+    <div class="formula">
+        Perimeter: cm, m, km<br>
+        Area: cm², m², km²<br>
+        1 m = 100 cm<br>
+        1 m² = 10,000 cm²
+    </div>
+</section>
+
+<section class="card">
+<h2>Exercise Set 6.1</h2>
+<div class="note">For calculations involving π, use 22/7 unless another value is specified.</div>
+
+<details>
+<summary>Solution 1</summary>
+<div class="solution">
+Circumference = 44 cm<br>
+Circumference = 2πr<br>
+44 = 2 × 22/7 × r<br>
+r = 44 × 7 ÷ 44<br>
+<div class="answer">Radius = 7 cm</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 2</summary>
+<div class="solution">
+Circumference = 2πr
+
+<p><strong>(i) Radius = 7 cm</strong></p>
+2 × 22/7 × 7 = 44 cm<br>
+To 3 significant figures: <strong>44.0 cm</strong>
+
+<p><strong>(ii) Radius = 10 cm</strong></p>
+2 × 22/7 × 10 = 440/7 ≈ 62.857 cm<br>
+To 3 significant figures: <strong>62.9 cm</strong>
+
+<p><strong>(iii) Radius = 12 cm</strong></p>
+2 × 22/7 × 12 = 528/7 ≈ 75.429 cm<br>
+To 3 significant figures: <strong>75.4 cm</strong>
+</div>
+</details>
+
+<details>
+<summary>Solution 3</summary>
+<div class="solution">
+<strong>(i)</strong> Radius = 3.5 cm, angle = 60°<br>
+Arc length = (θ/360°) × 2πr<br>
+= 60/360 × 2 × 22/7 × 3.5<br>
+= 22/6 = 11/3 cm ≈ 3.67 cm
+
+<p><strong>(ii)</strong> Radius = 6.3 m, angle = 120°</p>
+Arc length = 120/360 × 2 × 22/7 × 6.3<br>
+= 1/3 × 39.6<br>
+<div class="answer">Arc length = 13.2 m</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 4</summary>
+<div class="solution">
+Radius = 14 cm, angle = 75°<br>
+Arc length = 75/360 × 2 × 22/7 × 14<br>
+= 75/360 × 88 = 55/3 cm
+
+Sector perimeter = arc length + 2r<br>
+= 55/3 + 28<br>
+= 139/3 cm<br>
+<div class="answer">Perimeter ≈ 46.33 cm</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 5 — Composite circular boundaries</summary>
+<div class="solution">
+<p><strong>(i)</strong> Two straight sides of 80 m and two semicircles with diameter 60 m:</p>
+Perimeter = 80 + 80 + π × 60<br>
+= 160 + 1320/7<br>
+≈ <strong>348.57 m</strong>
+
+<p><strong>(ii)</strong> Semicircle radii are 6 cm and 4 cm; straight portions total 4 cm:</p>
+Perimeter = π × 6 + π × 4 + 4<br>
+= 10π + 4 ≈ <strong>35.43 cm</strong>
+
+<p><strong>(iii)</strong> Four semicircles, each of diameter 10 cm:</p>
+Perimeter = 4 × π × 5 = 20π<br>
+≈ <strong>62.86 cm</strong>
+
+<p><strong>(iv)</strong> Three semicircles, each of diameter 12 cm:</p>
+Perimeter = 3 × π × 6 = 18π<br>
+≈ <strong>56.57 cm</strong>
+
+<p><strong>(v)</strong> Four semicircles of radius 7 cm and four quarter-circle arcs of radius 14 cm:</p>
+Perimeter = 4π × 7 + 4 × (¼ × 2π × 14)<br>
+= 28π + 28π = 56π<br>
+<div class="answer">Perimeter = 176 cm</div>
+
+<p><strong>(vi)</strong> One semicircle of radius 14 cm and four semicircles of radius 3.5 cm:</p>
+Perimeter = 14π + 4 × 3.5π = 28π<br>
+<div class="answer">Perimeter = 88 cm</div>
+
+<p><strong>(vii)</strong> The right triangle has perpendicular sides 6 cm and 8 cm.</p>
+Hypotenuse = √(6² + 8²) = 10 cm<br>
+Total semicircular arc length = π × 3 + π × 4 + π × 5<br>
+= 12π ≈ <strong>37.71 cm</strong>
+
+<p><strong>(viii)</strong> One semicircle of radius 6 cm and three of radius 2 cm:</p>
+Perimeter = 6π + 3 × 2π = 12π<br>
+≈ <strong>37.71 cm</strong>
+
+<p><strong>(ix)</strong> One semicircle of radius 10 cm and two of radius 5 cm:</p>
+Perimeter = 10π + 2 × 5π = 20π<br>
+≈ <strong>62.86 cm</strong>
+</div>
+</details>
+
+<details>
+<summary>Solution 6</summary>
+<div class="solution">
+Diameter = 56 cm, so radius = 28 cm.
+
+<p><strong>(i) Distance in one revolution</strong></p>
+Distance = circumference = πd<br>
+= 22/7 × 56<br>
+<div class="answer">Distance = 176 cm</div>
+
+<p><strong>(ii) Revolutions in 10 km</strong></p>
+10 km = 1,000,000 cm<br>
+Number of revolutions = 1,000,000 ÷ 176<br>
+<div class="answer">Approximately 5,682 revolutions</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 7 — Total perimeter of the petals</summary>
+<div class="solution">
+<p><strong>(i)</strong> Square side = 14 cm. The four petals together contain the equivalent of two complete circles of radius 7 cm.</p>
+Total arc length = 2 × 2π × 7<br>
+<div class="answer">Total perimeter = 88 cm</div>
+
+<p><strong>(ii)</strong> For the regular hexagon, side and arc radius = 42 cm. The combined arcs make two complete circles.</p>
+Total arc length = 2 × 2π × 42<br>
+<div class="answer">Total perimeter = 528 cm</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 8</summary>
+<div class="solution">
+Circumference of a circle = 2πr.<br>
+Let the radii be R and r.
+
+2πR : 2πr = 5 : 4<br>
+Cancel 2π from both terms.<br>
+<div class="answer">Ratio of radii = 5 : 4</div>
+</div>
+</details>
+</section>
+
+<section class="card">
+<h2>Exercise Set 6.2</h2>
+
+<details>
+<summary>Solution 1</summary>
+<div class="solution">
+Area of triangle = ½ × base × height<br>
+= ½ × 8 × 10<br>
+<div class="answer">Area = 40 cm²</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 2</summary>
+<div class="solution">
+Parallel sides = 40 cm and 20 cm; equal slant sides = 26 cm.<br>
+Difference = 40 − 20 = 20 cm<br>
+Horizontal part on each side = 20/2 = 10 cm
+
+Height² = 26² − 10²<br>
+= 676 − 100 = 576<br>
+Height = 24 cm
+
+Area = ½ × (40 + 20) × 24<br>
+<div class="answer">Area = 720 cm²</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 3</summary>
+<div class="solution">
+Third side = 32 − (8 + 11) = 13 cm<br>
+Semi-perimeter s = 32/2 = 16 cm
+
+Heron's formula:<br>
+Area = √[16 × (16 − 8) × (16 − 11) × (16 − 13)]<br>
+= √(16 × 8 × 5 × 3)<br>
+<div class="answer">Area = 8√30 cm² ≈ 43.82 cm²</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 4</summary>
+<div class="solution">
+Sides are in ratio 3 : 5 : 7; perimeter = 300 m.<br>
+15x = 300, so x = 20.<br>
+Sides = 60 m, 100 m and 140 m.<br>
+Semi-perimeter s = 150 m.
+
+Area = √[150 × 90 × 50 × 10]<br>
+<div class="answer">Area = 1500√3 m²</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 5</summary>
+<div class="solution">
+Let the shorter diagonal be x cm. Longer diagonal = 2x cm.<br>
+Area of rhombus = ½ × d₁ × d₂<br>
+128 = ½ × x × 2x<br>
+x² = 128<br>
+<div class="answer">Shorter diagonal = 8√2 cm</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 6</summary>
+<div class="solution">
+Triangles PCD and QCD have the same base CD.<br>
+P and Q lie on AB, and AB is parallel to CD.<br>
+Therefore, both triangles have the same perpendicular height.
+
+Area(P△CD) = Area(Q△CD)<br>
+<div class="answer">Required ratio = 1 : 1</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 7</summary>
+<div class="solution">
+Use the area formula for the shape shown in the textbook figure. The required numerical measurements are figure-dependent; verify the original figure before entering a final numerical answer.
+<div class="note">This item needs the exact figure to avoid publishing an invented measurement or answer.</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 8</summary>
+<div class="solution">
+Let ABCD be the quadrilateral and P, Q, R, S be the midpoints of its sides. Join the midpoints in order.
+
+Draw diagonal AC. By the midpoint theorem, PQ ∥ AC and SR ∥ AC, with each segment half of AC. Hence PQRS is a parallelogram.
+
+The four corner triangles together occupy half the area of the original quadrilateral. The middle parallelogram occupies the other half.
+<div class="answer">Area(PQRS) = ½ × area(ABCD)</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 9</summary>
+<div class="solution">
+D is the midpoint of BC, so BD = DC.<br>
+Triangles PBD and PCD have equal bases and the same height; therefore, their areas are equal.
+
+Triangles ABD and ACD also have equal areas.<br>
+Subtracting the equal smaller areas from the equal larger areas gives:
+<div class="answer">Area(ABP) = Area(ACP)</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 10</summary>
+<div class="solution">
+Let the square's side be a. The red region contains triangles PAB and PCD.
+
+Red area = ½ah + ½a(a − h)<br>
+= ½a²
+
+Similarly, green area = ½ay + ½a(a − y)<br>
+= ½a²
+
+Both regions have equal area.
+<div class="answer">Red region : Green region = 1 : 1</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 11</summary>
+<div class="solution">
+Since D is the midpoint of AB, BD = DA.
+
+Using the equal-height triangle area relationship and the parallel-line condition in the figure, the smaller triangle BPQ occupies half the area of triangle ABC.
+<div class="answer">Area(BPQ) = ½ × Area(ABC)</div>
+<p class="small">For a formal proof, check the exact vertex arrangement and parallel lines in the textbook figure.</p>
+</div>
+</details>
+</section>
+
+<section class="card">
+<h2>Exercise Set 6.3</h2>
+<div class="note">Use π = 22/7 unless a different approximation is stated.</div>
+
+<details>
+<summary>Solution 1</summary>
+<div class="solution">
+Radius = 7 cm, angle = 60°.<br>
+Area of sector = (60/360) × π × 7²<br>
+= 1/6 × 22/7 × 49<br>
+<div class="answer">Area = 77/3 cm²</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 2</summary>
+<div class="solution">
+Circumference = 44 cm.<br>
+2πr = 44<br>
+2 × 22/7 × r = 44<br>
+r = 7 cm
+
+Area of quadrant = ¼ × πr²<br>
+= ¼ × 22/7 × 49<br>
+<div class="answer">Area = 77/2 cm²</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 3</summary>
+<div class="solution">
+The minute hand completes 360° in 60 minutes.<br>
+In 10 minutes, angle = 10/60 × 360° = 60°.<br>
+Radius = 7 cm.
+
+Area swept = 60/360 × 22/7 × 7²<br>
+<div class="answer">Area = 77/3 cm²</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 4</summary>
+<div class="solution">
+Radius = 10 cm; use π ≈ 3.14.
+
+<strong>(i) Minor sector:</strong><br>
+Area = 90/360 × 3.14 × 10²<br>
+<div class="answer">Area = 78.5 cm²</div>
+
+<strong>(ii) Major sector:</strong><br>
+Area = 270/360 × 3.14 × 10²<br>
+<div class="answer">Area = 235.5 cm²</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 5</summary>
+<div class="solution">
+Radius = 15 cm, central angle = 60°.<br>
+Minor sector area = 1/6 × 3.14 × 225 = 117.75 cm².
+
+The triangle formed by the two radii and the chord is equilateral.<br>
+Triangle area = √3/4 × 15²<br>
+= 1.73/4 × 225 = 97.3125 cm².
+
+Minor segment area = 117.75 − 97.3125<br>
+= 20.4375 cm²
+
+Circle area = 3.14 × 225 = 706.5 cm².<br>
+Major segment area = 706.5 − 20.4375<br>
+<div class="answer">Minor segment ≈ 20.44 cm²; major segment ≈ 686.06 cm²</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 6</summary>
+<div class="solution">
+For a segment, subtract the area of the triangle from the area of the corresponding sector. For the major segment, subtract the minor segment from the full circle's area.
+<div class="note">Use the angle, radius and figure values printed in your textbook for this item; do not assume measurements that are not visible here.</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 7</summary>
+<div class="solution">
+Let the chord subtend 60° in a circle of radius r.<br>
+The triangle formed by the two radii is equilateral, so its area is √3r²/4.
+
+Minor sector area = 60/360 × πr² = πr²/6.<br>
+Minor segment area = sector area − triangle area.
+<div class="answer">Minor segment area = r²(π/6 − √3/4)</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 8</summary>
+<div class="solution">
+For an equilateral triangle inscribed in a circle, side a = √3r.
+
+Triangle area = √3/4 × a²<br>
+= √3/4 × 3r²<br>
+= 3√3r²/4
+
+Circle area = πr².<br>
+<div class="answer">Area ratio = 3√3/(4π) ≈ 0.413</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 9</summary>
+<div class="solution">
+The square's diagonal equals the circle's diameter, 2r.
+
+If the square's side is a:<br>
+a² + a² = (2r)²<br>
+2a² = 4r², so a² = 2r².
+
+Square area = 2r²; circle area = πr².
+<div class="answer">Area ratio = 2/π ≈ 0.637</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 10</summary>
+<div class="solution">
+A regular hexagon inscribed in a circle can be divided into six equilateral triangles of side r.
+
+Hexagon area = 6 × √3r²/4<br>
+= 3√3r²/2
+
+Circle area = πr².
+<div class="answer">Area ratio = 3√3/(2π) ≈ 0.827</div>
+<p>The ratio is twice that for the inscribed equilateral triangle because the hexagon consists of six equal triangles while the inscribed triangle consists of three.</p>
+</div>
+</details>
+</section>
+
+<section class="card">
+<h2>End-of-Chapter Exercises</h2>
+
+<details>
+<summary>Solution 1</summary>
+<div class="solution">
+<strong>(i)</strong> A square of side a has area a². Removing a square of side b leaves area a² − b². Rearranging the remaining region gives a rectangle with sides (a + b) and (a − b).
+<div class="answer">(a + b)(a − b) = a² − b²</div>
+
+<strong>(ii)</strong> Divide a square of side (a + b + c) into squares and rectangles. The pieces have areas a², b², c², two ab rectangles, two bc rectangles and two ca rectangles.
+<div class="answer">(a + b + c)² = a² + b² + c² + 2ab + 2bc + 2ca</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 2</summary>
+<div class="solution">
+Equal sides = 15 cm; perimeter = 40 cm.<br>
+Base = 40 − 15 − 15 = 10 cm.<br>
+Half-base = 5 cm.
+
+Height = √(15² − 5²) = √200 = 10√2 cm.<br>
+Area = ½ × 10 × 10√2.
+<div class="answer">Area = 50√2 cm²</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 3</summary>
+<div class="solution">
+Base = 10 cm, area = 60 cm².<br>
+60 = ½ × 10 × height<br>
+Height = 12 cm.
+
+Half-base = 5 cm.<br>
+Equal side = √(12² + 5²) = √169 = 13 cm.
+<div class="answer">Both equal sides are 13 cm each.</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 4</summary>
+<div class="solution">
+Area = 54 cm²; one perpendicular side = 12 cm.<br>
+54 = ½ × 12 × other side<br>
+Other side = 9 cm.
+
+Hypotenuse = √(12² + 9²) = 15 cm.<br>
+Perimeter = 12 + 9 + 15.
+<div class="answer">Perimeter = 36 cm</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 5</summary>
+<div class="solution">
+Sides are 2x, 3x, 4x.<br>
+9x = 45, so x = 5.<br>
+Sides = 10 cm, 15 cm, 20 cm.<br>
+Semi-perimeter = 22.5 cm.
+
+Area = √[22.5 × 12.5 × 7.5 × 2.5]
+<div class="answer">Area ≈ 72.62 cm²</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 6</summary>
+<div class="solution">
+<strong>Method 1: Right-triangle area</strong><br>
+7² + 24² = 25², so it is right-angled.<br>
+Area = ½ × 7 × 24 = 84 cm².
+
+<strong>Method 2: Heron's formula</strong><br>
+s = (7 + 24 + 25)/2 = 28<br>
+Area = √[28 × 21 × 4 × 3] = √7056.
+<div class="answer">Area = 84 cm² by both methods.</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 7</summary>
+<div class="solution">
+Diameter = 60 cm.<br>
+Distance per revolution = πd = 22/7 × 60 = 1320/7 cm.<br>
+For 100 revolutions: 100 × 1320/7 = 18857.14 cm.
+<div class="answer">Distance ≈ 188.57 m</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 8</summary>
+<div class="solution">
+Circumference = 66 cm.<br>
+2 × 22/7 × r = 66<br>
+r = 10.5 cm.
+
+Quadrant area = ¼ × 22/7 × 10.5².
+<div class="answer">Area = 86.625 cm²</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 9</summary>
+<div class="solution">
+Radius = 28 cm.<br>
+Distance in one turn = 2πr = 2 × 22/7 × 28.
+<div class="answer">Distance in one turn = 176 cm</div>
+1 km = 100000 cm.<br>
+Number of turns = 100000/176 ≈ 568.18.
+<div class="answer">Approximately 568 turns</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 10</summary>
+<div class="solution">
+Let the rectangle sides be a, b and x, y.
+
+Equal areas give ab = xy.<br>
+Equal perimeters give a + b = x + y.
+
+The same sum and product determine the same pair of side lengths. Therefore, the corresponding sides match, possibly in reversed order.
+<div class="answer">Yes, the rectangles are congruent.</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 11</summary>
+<div class="solution">
+Draw a diagonal to divide the trapezium into two triangles with common height h.
+
+First triangle area = ½ah.<br>
+Second triangle area = ½bh.
+
+Adding:
+Area = ½ah + ½bh.
+<div class="answer">Area = ½(a + b)h</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 12</summary>
+<div class="solution">
+A diagonal divides the trapezium into two triangles with bases a and b and common height h.
+
+Total area = ½ah + ½bh<br>
+= ½(a + b)h.
+<div class="answer">Area = ½(a + b)h</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 13</summary>
+<div class="solution">
+Two identical trapeziums can be joined to form a parallelogram of base a + b and height h.
+
+Parallelogram area = (a + b)h.<br>
+One trapezium is half of this area.
+<div class="answer">Area of trapezium = ½(a + b)h</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 14</summary>
+<div class="solution">
+Let the diagonals of the kite be d₁ and d₂. The diagonals are perpendicular and divide the kite into four right triangles.
+
+Adding the four triangle areas:
+Area = ½(AO × BO + AO × DO + CO × BO + CO × DO)<br>
+= ½(AO + CO)(BO + DO).
+<div class="answer">Area of kite = ½ × d₁ × d₂</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 15</summary>
+<div class="solution">
+<strong>(i) Sides doubled:</strong> Every length is multiplied by 2, so area is multiplied by 2² = 4.
+<div class="answer">New area = 4 times the original area.</div>
+
+<strong>(ii) Sides doubled again:</strong> Using Heron's formula, the semi-perimeter also doubles. Each of the four factors under the square root doubles, giving an overall area factor of 4.
+<div class="answer">New area = 4 times the original area.</div>
+
+<strong>(iii) Sides tripled:</strong> Each of the four factors under the square root is multiplied by 3, so the square root is multiplied by 9.
+<div class="answer">New area = 9 times the original area.</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 16</summary>
+<div class="solution">
+<strong>Fig. 6.43:</strong> The midpoint and equal-height relationships divide the larger triangle into equal-area parts. The shaded middle region occupies half the whole triangle.
+<div class="answer">Shaded fraction = 1/2</div>
+
+<strong>Fig. 6.44:</strong> The shaded square's area is one-fifth of the area of the outer square.
+<div class="answer">Shaded fraction = 1/5</div>
+<p class="small">The second result depends on the exact construction in the printed figure.</p>
+</div>
+</details>
+
+<details>
+<summary>Solution 17</summary>
+<div class="solution">
+Let each circle have radius r. If n equal circles fit in one row, the rectangle's dimensions are 2nr by 2r.
+
+Rectangle area = 4nr².<br>
+Total circle area = nπr².
+<div class="answer">Fraction covered = π/4</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 18</summary>
+<div class="solution">
+For a circle, area = πr² and circumference = 2πr. Substitute the radius or diameter shown in the figure into the relevant formula, then subtract any unshaded region if required.
+<div class="note">The exact numerical result depends on the measurements in the original textbook figure; check that figure before publishing a number.</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 19</summary>
+<div class="solution">
+For a shaded region made from a circle and a polygon, calculate each simple shape's area separately. Add the required regions and subtract the parts that are outside the shaded boundary.
+<div class="note">Use the precise lengths and angles from the textbook diagram for the final numerical value.</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 20</summary>
+<div class="solution">
+Use the circle and sector formulas from the formula sheet. For any segment, subtract the triangle's area from the sector's area. For a remaining region, subtract the shaded or unshaded area as required by the figure.
+<div class="note">The original diagram is needed to determine the exact measurements and final answer.</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 21</summary>
+<div class="solution">
+Let the square side be 2r. Each semicircle has radius r.
+
+The two semicircle areas together equal πr². The quarter circle of radius 2r also has area:
+¼ × π × (2r)² = πr².
+
+Comparing the component areas gives:
+<div class="answer">Area A = Area B</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 22</summary>
+<div class="solution">
+Square side = 2 units, so each semicircle radius = 1 unit.
+
+The total boundary consists of four arcs of total length 4π.
+<div class="answer">Perimeter = 4π = 88/7 units</div>
+
+Each small curved section has area π/4 − 1/2. There are eight such sections.
+Area = 8(π/4 − 1/2) = 2π − 4.
+<div class="answer">Area = 16/7 square units</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 23</summary>
+<div class="solution">
+Let the radii of the larger and smaller circles be R and r. The common chord has length l and touches the smaller circle.
+
+Half-chord = l/2. Using Pythagoras:
+R² = r² + (l/2)²<br>
+R² − r² = l²/4.
+
+Area between the circles = πR² − πr².
+<div class="answer">Area = πl²/4</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 24</summary>
+<div class="solution">
+Area of a semicircle with diameter d = πd²/8.
+
+Let the right triangle's sides be a, b and c, with c the hypotenuse. Since a² + b² = c²:
+πa²/8 + πb²/8 = πc²/8.
+<div class="answer">Area(A) + Area(B) = Area(C)</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 25</summary>
+<div class="solution">
+For two equal circles of radius r whose centres lie on the other circle, the common chord and the centres form equilateral triangles with 60° angles. Use the sector and triangle areas to find the overlap, then subtract that overlap from the combined circle areas.
+<div class="note">The final enclosed region depends on which region is shaded in the original Fig. 6.53. Verify the diagram before publishing a numerical expression.</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 26</summary>
+<div class="solution">
+Let the perpendicular dimensions of the central right triangle be p and q.
+
+C = ½pq, so pq = 2C.<br>
+For the other marked triangles, px = 2A and qy = 2B.
+
+The rectangle area is:
+(x + q)(y + p) = xy + xp + qy + qp.
+
+Also, xy = (xp × qy)/(pq) = 2AB/C.
+Substituting the expressions gives:
+<div class="answer">Area of rectangle = 2(A + C)(B + C)/C</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 27</summary>
+<div class="solution">
+Let OA = OB = r. By Pythagoras:
+AB² = r² + r² = 2r²<br>
+AB = r√2.
+
+The semicircle with diameter AB has radius r√2/2.
+Its area = ½π(r√2/2)² = πr²/4.
+
+The quarter circle also has area ¼πr². Comparing the areas after removing the common region gives:
+<div class="answer">The two shaded regions have equal areas.</div>
+</div>
+</details>
+</section>
+
+<section class="card">
+<h2>Important Revision Notes</h2>
+<ul>
+<li>Perimeter uses ordinary length units; area uses square units.</li>
+<li>For a sector, calculate the arc length first if you need its perimeter.</li>
+<li>For a segment, subtract the triangle's area from the sector's area.</li>
+<li>Heron's formula is useful when all three sides of a triangle are known.</li>
+<li>Always check that all measurements use compatible units.</li>
+</ul>
+<div class="note">
+<strong>Accuracy note:</strong> The formula sheet and worked solutions above are written in student-friendly form. Some figure-based items need their original textbook diagrams to verify every final value. Check those entries against the 2026–27 textbook before presenting this page as a fully verified answer key.
+</div>
+</section>
+</main>
+
+<footer>© Academix by Tiwari | Learn Smarter</footer>
+</body>
+</html>
