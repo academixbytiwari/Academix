@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Class 9 Maths Chapter 7 Probability formula sheet and step-by-step solutions for Ganita Manjari on Academix by Tiwari.">
+<title>The Mathematics of Maybe | Class 9 Maths | Academix by Tiwari</title>
+
+<style>
+:root {
+    --navy: #12345a;
+    --blue: #1769aa;
+    --cyan: #08a6c2;
+    --bg: #f3f8fc;
+    --white: #ffffff;
+    --text: #243447;
+    --muted: #60758a;
+    --green: #e8f8ef;
+    --green-border: #32a66a;
+    --note: #eaf5ff;
+    --border: #d8e5ef;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+header {
+    background: linear-gradient(135deg, var(--navy), var(--blue), var(--cyan));
+    color: white;
+    text-align: center;
+    padding: 28px 16px;
+}
+.brand { font-size: 13px; font-weight: bold; letter-spacing: 2px; }
+header h1 { margin: 7px 0; font-size: clamp(25px, 5vw, 38px); }
+header p { margin: 4px 0; }
+main { max-width: 940px; margin: 24px auto; padding: 0 14px 35px; }
+.back {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: bold;
+}
+.card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 14px rgba(18,52,90,.05);
+}
+h2 {
+    color: var(--navy);
+    margin-top: 0;
+    border-bottom: 2px solid #e5f0f8;
+    padding-bottom: 8px;
+}
+h3 { color: var(--blue); }
+.formula {
+    background: #f4f8ff;
+    border: 1px solid #dce8f8;
+    border-radius: 9px;
+    padding: 11px 14px;
+    margin: 10px 0;
+    overflow-wrap: anywhere;
+}
+.note {
+    background: var(--note);
+    border-left: 4px solid var(--blue);
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin: 12px 0;
+}
+.answer {
+    background: var(--green);
+    border-left: 4px solid var(--green-border);
+    border-radius: 8px;
+    padding: 11px 14px;
+    margin-top: 12px;
+}
+details {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin: 12px 0;
+    overflow: hidden;
+}
+summary {
+    padding: 13px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--navy);
+    background: #f7fbff;
+}
+summary:hover { background: #edf6ff; }
+.solution { padding: 14px 16px; }
+.math { overflow-wrap: anywhere; }
+.small { color: var(--muted); font-size: 14px; }
+table { width: 100%; border-collapse: collapse; margin: 12px 0; }
+th, td { border: 1px solid var(--border); padding: 9px; text-align: left; }
+th { background: #edf6ff; color: var(--navy); }
+footer {
+    background: var(--navy);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+@media(max-width:600px) {
+    main { padding: 0 10px 25px; }
+    .card { padding: 15px; }
+    .solution { padding: 12px; }
+    th, td { padding: 7px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="brand">ACADEMIX BY TIWARI</div>
+    <h1>The Mathematics of Maybe</h1>
+    <p>Class 9 Mathematics · Chapter 7</p>
+    <p>Introduction to Probability</p>
+</header>
+
+<main>
+
+<a class="back" href="index.html">← Back to Academix Home</a>
+
+<section class="card">
+    <h2>Formula Sheet</h2>
+
+    <h3>1. Theoretical Probability</h3>
+    <div class="formula">
+        Probability of an event E = Number of favourable outcomes ÷ Total number of equally likely outcomes
+        <br><br>
+        P(E) = n(E) / n(S)
+    </div>
+
+    <h3>2. Experimental Probability</h3>
+    <div class="formula">
+        Experimental probability = Number of times the event occurs ÷ Total number of trials
+    </div>
+
+    <h3>3. Relative Frequency</h3>
+    <div class="formula">
+        Relative frequency = Frequency of an event ÷ Total observations
+    </div>
+
+    <h3>4. Estimating a Population</h3>
+    <div class="formula">
+        Estimated number = Probability estimated from the sample × Total population
+    </div>
+
+    <h3>5. Probability Range</h3>
+    <div class="formula">
+        0 ≤ P(E) ≤ 1<br>
+        Impossible event: P(E) = 0<br>
+        Certain event: P(E) = 1
+    </div>
+
+    <h3>6. Complementary Events</h3>
+    <div class="formula">
+        P(not E) = 1 − P(E)
+    </div>
+
+    <h3>7. Equally Likely Outcomes</h3>
+    <div class="formula">
+        If all outcomes have the same chance, probability is the number of favourable outcomes divided by the total number of outcomes.
+    </div>
+
+    <h3>8. Combined Independent Events</h3>
+    <div class="formula">
+        P(A and B) = P(A) × P(B)
+        <br>
+        Use this when the two events are independent.
+    </div>
+
+    <h3>9. Law of Large Numbers</h3>
+    <div class="formula">
+        As the number of trials increases, experimental probability tends to get closer to theoretical probability.
+    </div>
+
+    <div class="note">
+        <strong>Symbols:</strong> P(E) means the probability of event E.
+        n(E) is the number of favourable outcomes, and n(S) is the total number of outcomes in the sample space.
+    </div>
+</section>
+
+<section class="card">
+    <h2>Exercise Set 7.1</h2>
+
+    <details open>
+        <summary>Solution 1</summary>
+        <div class="solution">
+            <strong>(i)</strong> The event is certain because the days of the week follow a fixed order.
+            <div class="answer">Probability = 1</div>
+
+            <strong>(ii)</strong> Snow in Mumbai during July is considered impossible under normal weather conditions.
+            <div class="answer">Probability = 0</div>
+
+            <strong>(iii)</strong> An elephant entering a classroom is extremely unlikely in ordinary circumstances.
+            <div class="answer">Very close to 0 — extremely unlikely</div>
+
+            <strong>(iv)</strong> Greeting a friend at school is more likely than not, but it is not guaranteed.
+            <div class="answer">More likely — probability is high, but less than 1</div>
+
+            <p class="small">
+                Probability judgements about everyday events may depend on the situation. Give a reason for each ranking.
+            </p>
+        </div>
+    </details>
+</section>
+
+<section class="card">
+    <h2>Exercise Set 7.2</h2>
+
+    <details>
+        <summary>Solution 1</summary>
+        <div class="solution">
+            Total sweets in the sample = 30.
+
+            <p><strong>(i) Green sweets</strong></p>
+            Number of green sweets = 8<br>
+            Probability = 8/30 = 4/15
+            <div class="answer">P(green) = 4/15 ≈ 0.267</div>
+
+            <p><strong>(ii) Estimated yellow sweets</strong></p>
+            Number of yellow sweets in the sample = 7<br>
+            Probability = 7/30<br>
+            Total sweets = 600<br>
+            Estimated number = (7/30) × 600 = 140
+            <div class="answer">Approximately 140 yellow sweets</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>Solution 2</summary>
+        <div class="solution">
+            Total students in sample = 40.
+
+            <p><strong>(i) Arts Club</strong></p>
+            Probability = 11/40
+            <div class="answer">P(Arts Club) = 0.275</div>
+
+            <p><strong>(ii) Estimated students preferring Sports Club</strong></p>
+            Probability = 9/40<br>
+            Total school population = 800<br>
+            Estimate = (9/40) × 800 = 180
+            <div class="answer">Approximately 180 students</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>Solution 3</summary>
+        <div class="solution">
+            For the recorded experiment:
+
+            <p><strong>(i) Number of heads:</strong> 11</p>
+            <p><strong>(ii) Number of tails:</strong> 9</p>
+
+            <p><strong>(iii) Experimental probability of heads</strong></p>
+            P(heads) = 11/20
+            <div class="answer">P(heads) = 0.55</div>
+
+            <p><strong>(iv) Probability of tails on the next toss</strong></p>
+            If the coin is fair, each new toss has a theoretical probability of 1/2 for tails.
+            <div class="answer">P(tails) = 1/2</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>Solution 4</summary>
+        <div class="solution">
+            This is an experimental activity. The probabilities must be calculated from the results actually recorded.
+
+            <p>For example, suppose 100 trials give these observations:</p>
+            <table>
+                <tr><th>Landing outcome</th><th>Frequency</th><th>Experimental probability</th></tr>
+                <tr><td>On its bottom</td><td>35</td><td>35/100 = 0.35</td></tr>
+                <tr><td>Upside down</td><td>15</td><td>15/100 = 0.15</td></tr>
+                <tr><td>On its side</td><td>50</td><td>50/100 = 0.50</td></tr>
+            </table>
+            <div class="note">
+                These frequencies are only an example. Use your own recorded results for the actual activity.
+            </div>
+        </div>
+    </details>
+
+    <details>
+        <summary>Solution 5</summary>
+        <div class="solution">
+            Sample space = {1, 2, 3, 4, 5, 6}<br>
+            Even outcomes = {2, 4, 6}<br>
+            Favourable outcomes = 3<br>
+            Total outcomes = 6
+
+            P(even) = 3/6
+            <div class="answer">P(even) = 1/2</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>Solution 6</summary>
+        <div class="solution">
+            <strong>(i) Experimental probability</strong><br>
+            Number of times 3 appeared = 3<br>
+            Total rolls = 12<br>
+            P(3) = 3/12
+            <div class="answer">Experimental probability = 1/4</div>
+
+            <p><strong>(ii) Theoretical probability</strong></p>
+            A fair die has six equally likely faces, and only one face shows 3.
+            <div class="answer">Theoretical probability = 1/6</div>
+
+            <p><strong>(iii) Difference and larger number of trials</strong></p>
+            A small number of trials can produce results that differ from the theoretical value due to chance. With 60, 600 or 6000 rolls, the experimental probability will generally tend to move closer to 1/6, although it is not guaranteed to match it exactly.
+        </div>
+    </details>
+</section>
+
+<section class="card">
+    <h2>Exercise Set 7.3</h2>
+
+    <details>
+        <summary>Solution 1</summary>
+        <div class="solution">
+            The possible outcomes of one fair six-sided die are:
+            <p class="math">S = {1, 2, 3, 4, 5, 6}</p>
+            <div class="answer">n(S) = 6</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>Solution 2</summary>
+        <div class="solution">
+            <strong>(i) A die and a coin</strong>
+            <p>Each outcome is written as (die number, coin result).</p>
+            <p class="math">
+                S = {
+                (1,H), (1,T), (2,H), (2,T),
+                (3,H), (3,T), (4,H), (4,T),
+                (5,H), (5,T), (6,H), (6,T)
+                }
+            </p>
+            <div class="answer">n(S) = 12</div>
+
+            <strong>(ii) An integer from −5 to +5, including both endpoints</strong>
+            <p class="math">S = {−5, −4, −3, −2, −1, 0, 1, 2, 3, 4, 5}</p>
+            <div class="answer">n(S) = 11</div>
+
+            <strong>(iii) Drawing one ball from the box</strong>
+            <p>Label the individual balls so that every ball is a separate possible outcome.</p>
+            <p class="math">
+                S = {G₁, G₂, G₃, G₄, G₅,
+                R₁, R₂, R₃, R₄, R₅, R₆, R₇}
+            </p>
+            <div class="answer">n(S) = 12</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>Solution 3</summary>
+        <div class="solution">
+            <strong>(i) Sample space</strong>
+
+            <table>
+                <tr><th>Snack</th><th>Drink</th><th>Outcome</th></tr>
+                <tr><td>Samosa</td><td>Chai</td><td>(Samosa, Chai)</td></tr>
+                <tr><td>Samosa</td><td>Lassi</td><td>(Samosa, Lassi)</td></tr>
+                <tr><td>Pakora</td><td>Chai</td><td>(Pakora, Chai)</td></tr>
+                <tr><td>Pakora</td><td>Lassi</td><td>(Pakora, Lassi)</td></tr>
+                <tr><td>Bhaji</td><td>Chai</td><td>(Bhaji, Chai)</td></tr>
+                <tr><td>Bhaji</td><td>Lassi</td><td>(Bhaji, Lassi)</td></tr>
+            </table>
+
+            <div class="answer">Total outcomes = 6</div>
+
+            <strong>(ii) Event of selecting Samosa</strong>
+            <p class="math">E = {(Samosa, Chai), (Samosa, Lassi)}</p>
+            <p>There are two favourable outcomes out of six equally likely combinations.</p>
+            <div class="answer">P(Samosa) = 2/6 = 1/3</div>
+        </div>
+    </details>
+</section>
+
+<section class="card">
+    <h2>Exercise Set 7.4</h2>
+
+    <details>
+        <summary>Solution 1</summary>
+        <div class="solution">
+            <strong>(i) Tree structure</strong>
+
+            <svg viewBox="0 0 340 220" width="100%" role="img" aria-label="Tree diagram of fruit choices">
+                <g stroke="#1769aa" stroke-width="2" fill="none">
+                    <path d="M170 25 L85 85 M170 25 L255 85"/>
+                    <path d="M85 100 L45 160 M85 100 L125 160"/>
+                    <path d="M255 100 L215 160 M255 100 L295 160"/>
+                </g>
+                <g fill="#eaf5ff" stroke="#1769aa">
+                    <rect x="130" y="8" width="80" height="30" rx="7"/>
+                    <rect x="45" y="75" width="80" height="30" rx="7"/>
+                    <rect x="215" y="75" width="80" height="30" rx="7"/>
+                    <rect x="5" y="155" width="80" height="30" rx="7"/>
+                    <rect x="85" y="155" width="80" height="30" rx="7"/>
+                    <rect x="175" y="155" width="80" height="30" rx="7"/>
+                    <rect x="255" y="155" width="80" height="30" rx="7"/>
+                </g>
+                <g font-size="11" text-anchor="middle" fill="#12345a">
+                    <text x="170" y="27">Start</text>
+                    <text x="85" y="94">Apple</text>
+                    <text x="255" y="94">Orange</text>
+                    <text x="45" y="174">Banana</text>
+                    <text x="125" y="174">Mango</text>
+                    <text x="215" y="174">Banana</text>
+                    <text x="295" y="174">Mango</text>
+                </g>
+            </svg>
+
+            <strong>(ii) Sample space</strong>
+            <p class="math">
+                S = {
+                (Apple, Banana),
+                (Apple, Mango),
+                (Orange, Banana),
+                (Orange, Mango)
+                }
+            </p>
+            <div class="answer">n(S) = 4</div>
+
+            <strong>(iii) Probability of Apple and Banana</strong>
+            <p>Only one of the four outcomes contains Apple and Banana.</p>
+            <div class="answer">P(Apple and Banana) = 1/4</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>Solution 2</summary>
+        <div class="solution">
+            <strong>(i) Sample space</strong>
+
+            <p>Let R = red, B = black and G = green. Since the first pen is replaced, the second pick can again be any of the three colours.</p>
+
+            <p class="math">
+                S = {
+                (R,R), (R,B), (R,G),
+                (B,R), (B,B), (B,G),
+                (G,R), (G,B), (G,G)
+                }
+            </p>
+
+            <div class="note">
+                Tree structure: the first pick branches into R, B and G.
+                Each of those branches then splits again into R, B and G.
+            </div>
+
+            <strong>(ii) Probability of the same colour</strong>
+            <p>Favourable outcomes = {(R,R), (B,B), (G,G)}</p>
+            <p>Number of favourable outcomes = 3</p>
+            <p>Total colour combinations = 9</p>
+            <div class="answer">P(same colour) = 3/9 = 1/3</div>
+        </div>
+    </details>
+</section>
+
+<section class="card">
+    <h2>End-of-Chapter Exercises</h2>
+
+    <details>
+        <summary>Solution 1</summary>
+        <div class="solution">
+            <strong>(i)</strong> Probability of an impossible event = 0.<br>
+            <strong>(ii)</strong> The set of all possible outcomes is called the sample space.<br>
+            <strong>(iii)</strong> Probability of a certain event = 1.<br>
+            <strong>(iv)</strong> Probability of heads for a fair coin = 1/2.
+        </div>
+    </details>
+
+    <details>
+        <summary>Solution 2</summary>
+        <div class="solution">
+            Total students = 50<br>
+            Students who like football = 15
+
+            Relative frequency = 15/50 = 3/10 = 0.3
+
+            <div class="answer">
+                Required term: Relative frequency<br>
+                Value = 3/10 = 0.3
+            </div>
+        </div>
+    </details>
+
+    <details>
+        <summary>Solution 3</summary>
+        <div class="solution">
+            <strong>(i) Starting a car:</strong> The outcomes are not necessarily equally likely; they depend on the car's condition.
+
+            <p><strong>(ii) Tossing a fair coin:</strong> Heads and tails are equally likely, each with probability 1/2.</p>
+
+            <p><strong>(iii) Rolling a fair six-sided die:</strong> Each face has probability 1/6, so the outcomes are equally likely.</p>
+
+            <p><strong>(iv) Selecting from 3 red and 7 blue marbles:</strong> The colours are not equally likely.</p>
+            P(red) = 3/10; P(blue) = 7/10.
+        </div>
+    </details>
+
+    <details>
+        <summary>Solution 4</summary>
+        <div class="solution">
+            <strong>(i) At least one head from two coins</strong>
+            <p>S = {HH, HT, TH, TT}</p>
+            <p>Favourable outcomes = {HH, HT, TH}</p>
+            <div class="answer">Probability = 3/4</div>
+
+            <strong>(ii) An even number from cards 1 to 10</strong>
+            <p>Even outcomes = {2, 4, 6, 8, 10}</p>
+            <div class="answer">Probability = 5/10 = 1/2</div>
+
+            <strong>(iii) A number greater than 4 on a die</strong>
+            <p>Favourable outcomes = {5, 6}</p>
+            <div class="answer">Probability = 2/6 = 1/3</div>
+
+            <strong>(iv) A ball that is not red</strong>
+            <p>Total balls = 3 + 2 + 1 = 6</p>
+            <p>Non-red balls = 2 + 1 = 3</p>
+            <div class="answer">Probability = 3/6 = 1/2</div>
+
+            <strong>(v) Exactly two heads from three coins</strong>
+            <p>S = {HHH, HHT, HTH, THH, HTT, THT, TTH, TTT}</p>
+            <p>Favourable outcomes = {HHT, HTH, THH}</p>
+            <div class="answer">Probability = 3/8</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>Solution 5</summary>
+        <div class="solution">
+            The three candies are strawberry, lemon and mint.
+
+            <p>Favourable outcomes = 1</p>
+            <p>Total outcomes = 3</p>
+
+            <div class="answer">P(strawberry) = 1/3</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>Solution 6</summary>
+        <div class="solution">
+            <table>
+                <tr><th>Shirt</th><th>Pants</th><th>Combination</th></tr>
+                <tr><td>Red</td><td>Jeans</td><td>Red shirt + Jeans</td></tr>
+                <tr><td>Red</td><td>Khakis</td><td>Red shirt + Khakis</td></tr>
+                <tr><td>Red</td><td>Shorts</td><td>Red shirt + Shorts</td></tr>
+                <tr><td>Blue</td><td>Jeans</td><td>Blue shirt + Jeans</td></tr>
+                <tr><td>Blue</td><td>Khakis</td><td>Blue shirt + Khakis</td></tr>
+                <tr><td>Blue</td><td>Shorts</td><td>Blue shirt + Shorts</td></tr>
+            </table>
+            <div class="answer">Total combinations = 2 × 3 = 6</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>Solution 7</summary>
+        <div class="solution">
+            Total recorded tyres = 1000.
+
+            <p><strong>(i) Lasts less than 4000 km</strong></p>
+            P = 20/1000
+            <div class="answer">P = 1/50 = 0.02</div>
+
+            <p><strong>(ii) Lasts between 4000 and 14000 km</strong></p>
+            Number of cases = 210 + 325 = 535
+            <div class="answer">P = 535/1000 = 0.535</div>
+
+            <p><strong>(iii) Lasts more than 14000 km</strong></p>
+            P = 445/1000
+            <div class="answer">P = 0.445</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>Solution 8</summary>
+        <div class="solution">
+            The word PEACE contains five letter cards: P, E, A, C, E.
+
+            <strong>(i) P, E or C</strong>
+            <p>Favourable cards = P, E, E, C = 4</p>
+            <div class="answer">Probability = 4/5</div>
+
+            <strong>(ii) Not an E</strong>
+            <p>Non-E cards = P, A, C = 3</p>
+            <div class="answer">Probability = 3/5</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>Solution 9</summary>
+        <div class="solution">
+            The spinner has eight equally likely outcomes: {1, 2, 3, 4, 5, 6, 7, 8}.
+
+            <p><strong>(i) Landing on 8</strong></p>
+            <div class="answer">P = 1/8</div>
+
+            <p><strong>(ii) Landing on an odd number</strong></p>
+            Odd numbers = {1, 3, 5, 7}
+            <div class="answer">P = 4/8 = 1/2</div>
+
+            <p><strong>(iii) Landing on a number greater than 2</strong></p>
+            Outcomes = {3, 4, 5, 6, 7, 8}
+            <div class="answer">P = 6/8 = 3/4</div>
+
+            <p><strong>(iv) Landing on a number less than 9</strong></p>
+            All eight outcomes satisfy this condition.
+            <div class="answer">P = 8/8 = 1</div>
+
+            <p><strong>(v) Landing on a multiple of 3</strong></p>
+            Outcomes = {3, 6}
+            <div class="answer">P = 2/8 = 1/4</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>Solution 10</summary>
+        <div class="solution">
+            Total balls = 4 red + 5 blue = 9.
+
+            <p><strong>(i) Red, then blue</strong></p>
+            P(first red) = 4/9<br>
+            After drawing red, 5 blue balls remain out of 8 balls.<br>
+            P(second blue) = 5/8
+
+            P(red, then blue) = (4/9) × (5/8)
+            <div class="answer">Probability = 5/18</div>
+
+            <p><strong>(ii) Two blue balls</strong></p>
+            P(first blue) = 5/9<br>
+            After one blue is removed, 4 blue balls remain out of 8.<br>
+            P(second blue) = 4/8
+
+            P(two blue) = (5/9) × (4/8)
+            <div class="answer">Probability = 5/18</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>Solution 11</summary>
+        <div class="solution">
+            <strong>Event with probability 0:</strong> Getting a sum of 1 with two dice is impossible because the smallest possible sum is 2.
+
+            <div class="answer">P(sum = 1) = 0</div>
+
+            <strong>Event with probability 1:</strong> The sum of two six-sided dice is always less than 13 because the maximum sum is 12.
+            <div class="answer">P(sum less than 13) = 1</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>Solution 12</summary>
+        <div class="solution">
+            <strong>(i) A prime sum greater than 5</strong>
+            <p>There are 36 ordered outcomes when two dice are rolled.</p>
+            <p>Prime sums greater than 5 are 7 and 11.</p>
+            <p>Sum 7: 6 outcomes. Sum 11: 2 outcomes.</p>
+            <div class="answer">P = (6 + 2)/36 = 2/9</div>
+
+            <strong>(ii) Two balls of different colours</strong>
+            <p>There are 4 red, 3 green and 2 blue balls. Total = 9.</p>
+            <p>Favourable ordered selections:</p>
+            Red-green: 4 × 3 × 2 = 24<br>
+            Red-blue: 4 × 2 × 2 = 16<br>
+            Green-blue: 3 × 2 × 2 = 12<br>
+            Total favourable = 52
+
+            Total ordered selections = 9 × 8 = 72.
+            <div class="answer">P(different colours) = 52/72 = 13/18</div>
+
+            <strong>(iii) First coin is heads and exactly two heads occur</strong>
+            <p>Favourable outcomes = {HHT, HTH}</p>
+            <p>Total outcomes = 8</p>
+            <div class="answer">P = 2/8 = 1/4</div>
+
+            <strong>(iv) Four-digit number is even</strong>
+            <p>Total arrangements of 1, 2, 3, 4 = 4! = 24.</p>
+            <p>The last digit must be 2 or 4. Each choice gives 3! = 6 arrangements.</p>
+            <p>Favourable arrangements = 6 + 6 = 12.</p>
+            <div class="answer">P(even number) = 12/24 = 1/2</div>
+
+            <strong>(v) Exactly two correct answers</strong>
+            <p>Probability of a correct answer = 1/4.</p>
+            <p>Probability of a wrong answer = 3/4.</p>
+            <p>There are three possible positions for the one wrong answer.</p>
+            P = 3 × (1/4 × 1/4 × 3/4)
+            <div class="answer">P(exactly two correct) = 9/64</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>Solution 13</summary>
+        <div class="solution">
+            <strong>(i) First ball is replaced</strong>
+            <p>Every first number can be followed by any of the four numbers.</p>
+            <div class="answer">Number of outcomes = 4 × 4 = 16</div>
+
+            <strong>(ii) First ball is not replaced</strong>
+            <p>The second number must differ from the first.</p>
+            <div class="answer">Number of outcomes = 4 × 3 = 12</div>
+
+            <strong>(iii) Sample-space sizes</strong>
+            <div class="answer">With replacement: 16; without replacement: 12</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>Solution 14</summary>
+        <div class="solution">
+            Coin outcomes = {H, T}. Card outcomes = {1, 2, 3, 4, 5, 6}.
+
+            <p class="math">
+                S = {
+                (H,1), (H,2), (H,3), (H,4), (H,5), (H,6),
+                (T,1), (T,2), (T,3), (T,4), (T,5), (T,6)
+                }
+            </p>
+            <div class="answer">n(S) = 2 × 6 = 12</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>Solution 15</summary>
+        <div class="solution">
+            When three coins are tossed, the number of heads can only be 0, 1, 2 or 3.
+
+            <p><strong>(i) {1, 2, 3}</strong> — Not valid; it misses 0 heads.</p>
+            <p><strong>(ii) {0, 1, 2}</strong> — Not valid; it misses 3 heads.</p>
+            <p><strong>(iii) {0, 1, 2, 3, 4}</strong> — Not valid; four heads cannot occur with three coins.</p>
+            <p><strong>(iv) {0, 1, 2, 3}</strong> — Valid; it contains every possible number of heads.</p>
+
+            <div class="answer">Correct sample space: {0, 1, 2, 3}</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>Solution 16</summary>
+        <div class="solution">
+            Rectangle dimensions = 3 m × 2 m.
+
+            <p>Area of rectangle = 3 × 2 = 6 m².</p>
+
+            <p>Circle diameter = 1 m, so radius = 1/2 m.</p>
+
+            <p>Area of circle = πr² = π × (1/2)² = π/4 m².</p>
+
+            <p>Assuming the point is equally likely to land anywhere in the rectangle:</p>
+
+            Probability = Area of circle ÷ Area of rectangle<br>
+            = (π/4) ÷ 6
+            <div class="answer">Probability = π/24 ≈ 0.131</div>
+        </div>
+    </details>
+</section>
+
+<section class="card">
+    <h2>Quick Revision</h2>
+
+    <details>
+        <summary>What is a sample space?</summary>
+        <div class="solution">
+            A sample space is the set of all possible outcomes of a random experiment.
+        </div>
+    </details>
+
+    <details>
+        <summary>What is an event?</summary>
+        <div class="solution">
+            An event is an outcome or a collection of outcomes from a sample space.
+        </div>
+    </details>
+
+    <details>
+        <summary>Can probability be negative or greater than 1?</summary>
+        <div class="solution">
+            No. Every probability lies between 0 and 1, including both endpoints.
+        </div>
+    </details>
+
+    <details>
+        <summary>Does a coin landing heads repeatedly guarantee tails next?</summary>
+        <div class="solution">
+            No. For a fair coin, every independent toss still has a probability of 1/2 for heads and 1/2 for tails.
+        </div>
+    </details>
+
+    <div class="note">
+        <strong>Final check:</strong> These are original, question-statement-free solutions based on the chapter's reported exercise structure. Please verify the few activity-based or diagram-dependent entries against your exact 2026–27 textbook before publishing the page as a fully verified answer key.
+    </div>
+</section>
+
+</main>
+
+<footer>
+    © Academix by Tiwari | Learn Smarter
+</footer>
+
+</body>
+</html>
