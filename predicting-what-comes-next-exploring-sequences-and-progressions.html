@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Class 9 Maths Chapter 8: Sequences and Progressions. Formula sheet and step-by-step solutions on Academix by Tiwari.">
+<title>Predicting What Comes Next | Academix by Tiwari</title>
+
+<style>
+:root {
+    --navy:#12345a;
+    --blue:#1769aa;
+    --cyan:#08a6c2;
+    --bg:#f3f8fc;
+    --white:#fff;
+    --text:#243447;
+    --muted:#60758a;
+    --green:#e8f8ef;
+    --green-border:#32a66a;
+    --note:#eaf5ff;
+    --border:#d8e5ef;
+}
+* { box-sizing:border-box; }
+body {
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.7;
+}
+header {
+    background:linear-gradient(135deg,var(--navy),var(--blue),var(--cyan));
+    color:white;
+    text-align:center;
+    padding:28px 16px;
+}
+.brand { font-size:13px;font-weight:bold;letter-spacing:2px; }
+header h1 { margin:7px 0;font-size:clamp(25px,5vw,38px); }
+header p { margin:4px 0; }
+main { max-width:940px;margin:24px auto;padding:0 14px 35px; }
+.back {
+    display:inline-block;
+    margin-bottom:16px;
+    color:var(--blue);
+    text-decoration:none;
+    font-weight:bold;
+}
+.card {
+    background:white;
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:20px;
+    margin-bottom:20px;
+    box-shadow:0 4px 14px rgba(18,52,90,.05);
+}
+h2 {
+    color:var(--navy);
+    margin-top:0;
+    border-bottom:2px solid #e5f0f8;
+    padding-bottom:8px;
+}
+h3 { color:var(--blue); }
+.formula {
+    background:#f4f8ff;
+    border:1px solid #dce8f8;
+    border-radius:9px;
+    padding:11px 14px;
+    margin:10px 0;
+    overflow-wrap:anywhere;
+}
+.note {
+    background:var(--note);
+    border-left:4px solid var(--blue);
+    border-radius:8px;
+    padding:12px 14px;
+    margin:12px 0;
+}
+.answer {
+    background:var(--green);
+    border-left:4px solid var(--green-border);
+    border-radius:8px;
+    padding:11px 14px;
+    margin-top:12px;
+}
+details {
+    background:white;
+    border:1px solid var(--border);
+    border-radius:10px;
+    margin:12px 0;
+    overflow:hidden;
+}
+summary {
+    padding:13px 15px;
+    cursor:pointer;
+    font-weight:bold;
+    color:var(--navy);
+    background:#f7fbff;
+}
+summary:hover { background:#edf6ff; }
+.solution { padding:14px 16px; }
+.math { overflow-wrap:anywhere; }
+.small { color:var(--muted);font-size:14px; }
+footer {
+    background:var(--navy);
+    color:white;
+    text-align:center;
+    padding:20px;
+    font-size:14px;
+}
+@media(max-width:600px) {
+    main { padding:0 10px 25px; }
+    .card { padding:15px; }
+    .solution { padding:12px; }
+}
+</style>
+</head>
+
+<body>
+<header>
+    <div class="brand">ACADEMIX BY TIWARI</div>
+    <h1>Predicting What Comes Next</h1>
+    <p>Class 9 Mathematics · Chapter 8</p>
+    <p>Exploring Sequences and Progressions</p>
+</header>
+
+<main>
+<a class="back" href="index.html">← Back to Academix Home</a>
+
+<section class="card">
+<h2>Formula Sheet</h2>
+
+<h3>1. General Sequence</h3>
+<div class="formula">
+    Explicit rule: tₙ = expression involving n<br>
+    Here, tₙ is the nth term and n is its position.
+</div>
+
+<h3>2. Arithmetic Progression (AP)</h3>
+<div class="formula">
+    Common difference: d = t₂ − t₁<br>
+    nth term: tₙ = a + (n − 1)d<br>
+    Recursive rule: t₁ = a; tₙ = tₙ₋₁ + d<br>
+    Sum of n AP terms: Sₙ = n/2 × [2a + (n − 1)d]<br>
+    Also: Sₙ = n/2 × (first term + last term)
+</div>
+
+<h3>3. Sum of First n Natural Numbers</h3>
+<div class="formula">
+    Sₙ = n(n + 1)/2
+</div>
+
+<h3>4. Triangular Numbers</h3>
+<div class="formula">
+    Tₙ = n(n + 1)/2
+</div>
+
+<h3>5. Geometric Progression (GP)</h3>
+<div class="formula">
+    Common ratio: r = t₂/t₁<br>
+    nth term: tₙ = arⁿ⁻¹<br>
+    Recursive rule: t₁ = a; tₙ = r × tₙ₋₁
+</div>
+
+<h3>6. Geometric Sum</h3>
+<div class="formula">
+    For r ≠ 1:<br>
+    Sₙ = a(rⁿ − 1)/(r − 1)
+</div>
+
+<h3>7. Exponential Growth or Decay</h3>
+<div class="formula">
+    Quantity after n stages = Initial quantity × (growth factor)ⁿ
+    <p class="small">
+    Use this when the initial quantity is the stage 0 value and the quantity
+    is multiplied by the same factor at every stage.
+    </p>
+</div>
+
+<div class="note">
+<strong>Symbols:</strong> a = first term, d = common difference, r = common
+ratio, n = term position, tₙ = nth term and Sₙ = sum of the first n terms.
+</div>
+</section>
+
+<section class="card">
+<h2>Exercise Set 8.1</h2>
+
+<details>
+<summary>Solution 1</summary>
+<div class="solution">
+<strong>(i)</strong> tₙ = 3n − 4
+
+t₁ = 3(1) − 4 = −1<br>
+t₂ = 3(2) − 4 = 2<br>
+t₃ = 3(3) − 4 = 5<br>
+t₄ = 3(4) − 4 = 8<br>
+t₅ = 3(5) − 4 = 11
+
+<div class="answer">First five terms: −1, 2, 5, 8, 11</div>
+
+<strong>(ii)</strong> tₙ = 2 − 5n
+
+t₁ = 2 − 5 = −3<br>
+t₂ = 2 − 10 = −8<br>
+t₃ = 2 − 15 = −13<br>
+t₄ = 2 − 20 = −18<br>
+t₅ = 2 − 25 = −23
+
+<div class="answer">First five terms: −3, −8, −13, −18, −23</div>
+
+<strong>(iii)</strong> tₙ = n² − 2n + 3
+
+t₁ = 1 − 2 + 3 = 2<br>
+t₂ = 4 − 4 + 3 = 3<br>
+t₃ = 9 − 6 + 3 = 6<br>
+t₄ = 16 − 8 + 3 = 11<br>
+t₅ = 25 − 10 + 3 = 18
+
+<div class="answer">First five terms: 2, 3, 6, 11, 18</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 2</summary>
+<div class="solution">
+Given tₙ = 5n − 3.
+
+<strong>10th term:</strong><br>
+t₁₀ = 5(10) − 3 = 50 − 3 = 47
+
+<strong>15th term:</strong><br>
+t₁₅ = 5(15) − 3 = 75 − 3 = 72
+
+<div class="answer">10th term = 47; 15th term = 72</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 3</summary>
+<div class="solution">
+Given tₙ = 5n − 3.
+
+<strong>Checking 97:</strong><br>
+5n − 3 = 97<br>
+5n = 100<br>
+n = 20
+
+Since 20 is a natural number, 97 belongs to the sequence.
+
+<strong>Checking 172:</strong><br>
+5n − 3 = 172<br>
+5n = 175<br>
+n = 35
+
+Since 35 is a natural number, 172 also belongs to the sequence.
+
+<div class="answer">97 is the 20th term; 172 is the 35th term.</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 4</summary>
+<div class="solution">
+Given tₙ = 5n − 3.
+
+5n − 3 = 607<br>
+5n = 610<br>
+n = 122
+
+<div class="answer">607 is the 122nd term.</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 5</summary>
+<div class="solution">
+First term: t₁ = −5<br>
+Recursive rule: tₙ₊₁ = tₙ + 3
+
+t₁ = −5<br>
+t₂ = −5 + 3 = −2<br>
+t₃ = −2 + 3 = 1<br>
+t₄ = 1 + 3 = 4<br>
+t₅ = 4 + 3 = 7
+
+The sequence is an AP with a = −5 and d = 3.
+
+tₙ = a + (n − 1)d<br>
+tₙ = −5 + 3(n − 1)<br>
+tₙ = 3n − 8
+
+Checking 52:
+
+3n − 8 = 52<br>
+3n = 60<br>
+n = 20
+
+<div class="answer">First five terms: −5, −2, 1, 4, 7. The number 52 is the 20th term.</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 6</summary>
+<div class="solution">
+Given T₁ = 1, T₂ = 2, T₃ = 4, and each later term is the sum of the previous three terms.
+
+T₄ = 4 + 2 + 1 = 7<br>
+T₅ = 7 + 4 + 2 = 13<br>
+T₆ = 13 + 7 + 4 = 24<br>
+T₇ = 24 + 13 + 7 = 44<br>
+T₈ = 44 + 24 + 13 = 81
+
+<div class="answer">T₄ = 7, T₅ = 13, T₆ = 24, T₇ = 44, T₈ = 81</div>
+</div>
+</details>
+</section>
+
+<section class="card">
+<h2>Exercise Set 8.2</h2>
+
+<details>
+<summary>Solution 1</summary>
+<div class="solution">
+AP: 3, 8, 13, 18, …
+
+First term a = 3<br>
+Common difference d = 8 − 3 = 5
+
+nth-term formula: tₙ = a + (n − 1)d
+
+10th term = 3 + 9(5) = 48<br>
+26th term = 3 + 25(5) = 128
+
+<div class="answer">10th term = 48; 26th term = 128</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 2</summary>
+<div class="solution">
+AP: 21, 18, 15, …
+
+a = 21; d = −3<br>
+tₙ = 21 + (n − 1)(−3)<br>
+tₙ = 24 − 3n
+
+<strong>For −81:</strong><br>
+24 − 3n = −81<br>
+−3n = −105<br>
+n = 35
+
+<strong>For 0:</strong><br>
+24 − 3n = 0<br>
+3n = 24<br>
+n = 8
+
+<div class="answer">−81 is the 35th term, and 0 is the 8th term.</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 3</summary>
+<div class="solution">
+AP: 11, 8, 5, 2, …
+
+a = 11; d = 8 − 11 = −3
+
+tₙ = a + (n − 1)d<br>
+tₙ = 11 − 3(n − 1)<br>
+tₙ = 14 − 3n
+
+Recursive rule:
+
+t₁ = 11<br>
+tₙ = tₙ₋₁ − 3, for n ≥ 2
+
+<div class="answer">Explicit rule: tₙ = 14 − 3n</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 4</summary>
+<div class="solution">
+Let the first term be a and common difference be d.
+
+Third term: a + 2d = 12 ...(1)<br>
+50th term: a + 49d = 106 ...(2)
+
+Subtract (1) from (2):
+
+47d = 94<br>
+d = 2
+
+Substitute d = 2 in (1):
+
+a + 4 = 12<br>
+a = 8
+
+29th term = a + 28d<br>
+= 8 + 28(2) = 64
+
+<div class="answer">29th term = 64</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 5</summary>
+<div class="solution">
+Two-digit multiples of 3 form an AP:
+
+12, 15, 18, …, 99
+
+a = 12; d = 3; last term = 99
+
+99 = 12 + (n − 1)3<br>
+87 = 3(n − 1)<br>
+29 = n − 1<br>
+n = 30
+
+Sum = n/2 × (first term + last term)<br>
+= 30/2 × (12 + 99)<br>
+= 15 × 111 = 1665
+
+<div class="answer">There are 30 numbers; their sum is 1665.</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 6</summary>
+<div class="solution">
+Starting salary a = ₹5,00,000<br>
+Annual increment d = ₹20,000
+
+Target salary = ₹7,00,000
+
+7,00,000 = 5,00,000 + (n − 1)20,000<br>
+2,00,000 = (n − 1)20,000<br>
+n − 1 = 10<br>
+n = 11
+
+<div class="answer">The salary reaches ₹7,00,000 in the 11th year, after 10 annual increments.</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 7</summary>
+<div class="solution">
+The rows contain 1, 2, 3, …, 25 marbles.
+
+Sum of first n natural numbers:
+
+Sₙ = n(n + 1)/2
+
+S₂₅ = 25(26)/2<br>
+= 25 × 13<br>
+= 325
+
+<div class="answer">Total marbles = 325</div>
+</div>
+</details>
+</section>
+
+<section class="card">
+<h2>Exercise Set 8.3</h2>
+
+<details>
+<summary>Solution 1</summary>
+<div class="solution">
+Given common ratio r = 2 and eighth term = 192.
+
+t₈ = ar⁷ = 192<br>
+a × 2⁷ = 192<br>
+128a = 192<br>
+a = 3/2
+
+Now, t₁₂ = ar¹¹<br>
+= (3/2) × 2¹¹<br>
+= 3 × 2¹⁰<br>
+= 3072
+
+<div class="answer">12th term = 3072</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 2</summary>
+<div class="solution">
+GP: 5, 25, 125, …
+
+a = 5; r = 25/5 = 5
+
+tₙ = arⁿ⁻¹<br>
+tₙ = 5 × 5ⁿ⁻¹ = 5ⁿ
+
+10th term = 5¹⁰
+
+<div class="answer">nth term = 5ⁿ; 10th term = 9,765,625</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 3</summary>
+<div class="solution">
+Given t₁ = 2 and tₙ₊₁ = 3tₙ − 2.
+
+t₁ = 2<br>
+t₂ = 3(2) − 2 = 4<br>
+t₃ = 3(4) − 2 = 10<br>
+t₄ = 3(10) − 2 = 28<br>
+t₅ = 3(28) − 2 = 82<br>
+t₆ = 3(82) − 2 = 244<br>
+t₇ = 3(244) − 2 = 730
+
+<div class="answer">730 is the 7th term.</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 4</summary>
+<div class="solution">
+GP: 2, 6, 18, …
+
+a = 2; r = 6/2 = 3
+
+Explicit rule: tₙ = 2 × 3ⁿ⁻¹
+
+Checking 4374:
+
+2 × 3ⁿ⁻¹ = 4374<br>
+3ⁿ⁻¹ = 2187 = 3⁷<br>
+n − 1 = 7<br>
+n = 8
+
+Recursive rule:
+
+t₁ = 2<br>
+tₙ = 3tₙ₋₁, for n ≥ 2
+
+<div class="answer">4374 is the 8th term.</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 5</summary>
+<div class="solution">
+<strong>(i) Height after the fifth bounce</strong>
+
+Initial height = 80 m<br>
+Common ratio = 60/100 = 0.6
+
+Height after bounce n = 80 × 0.6ⁿ
+
+After the fifth bounce:
+
+80 × 0.6⁵ = 80 × 0.07776
+
+<div class="answer">Height = 6.2208 m</div>
+
+<strong>(ii) Total vertical distance until the sixth ground contact</strong>
+
+The ball first falls 80 m. Each of the first five bounces then contributes an upward and downward journey.
+
+Distance = 80 + 2(48 + 28.8 + 17.28 + 10.368 + 6.2208)<br>
+= 80 + 2(110.6688)<br>
+= 301.3376 m
+
+<div class="answer">Total distance = 301.3376 m</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 6</summary>
+<div class="solution">
+Sequence: 2, 2√2, 4, …
+
+a = 2; r = √2
+
+tₙ = 2(√2)ⁿ⁻¹
+
+Set tₙ = 128:
+
+2(√2)ⁿ⁻¹ = 128<br>
+(√2)ⁿ⁻¹ = 64 = 2⁶<br>
+2^((n − 1)/2) = 2⁶<br>
+(n − 1)/2 = 6<br>
+n − 1 = 12<br>
+n = 13
+
+<div class="answer">128 is the 13th term.</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 7</summary>
+<div class="solution">
+<strong>(i) Number of red squares</strong>
+
+Stage 0 = 1<br>
+Stage 1 = 8<br>
+Stage 2 = 8² = 64<br>
+Stage 3 = 8³ = 512
+
+<div class="answer">Stages 0 to 3: 1, 8, 64, 512</div>
+
+<strong>(ii) Later stages</strong>
+
+Stage 4 = 8⁴ = 4096<br>
+Stage 5 = 8⁵ = 32768
+
+<strong>(iii) Explicit and recursive rules</strong>
+
+tₙ = 8ⁿ, with Stage 0 corresponding to n = 0.
+
+Recursive rule:
+
+t₀ = 1<br>
+tₙ = 8tₙ₋₁, for n ≥ 1
+
+<strong>(iv) Area of the remaining red region</strong>
+
+Each stage retains 8/9 of the previous area.
+
+A₀ = 1<br>
+A₁ = 8/9<br>
+A₂ = (8/9)² = 64/81<br>
+A₃ = (8/9)³ = 512/729<br>
+A₄ = (8/9)⁴ = 4096/6561<br>
+A₅ = (8/9)⁵ = 32768/59049
+
+Explicit rule: Aₙ = (8/9)ⁿ
+
+Recursive rule:
+
+A₀ = 1<br>
+Aₙ = (8/9)Aₙ₋₁
+
+<div class="answer">As n increases, the red area approaches 0.</div>
+</div>
+</details>
+</section>
+
+<section class="card">
+<h2>End-of-Chapter Exercises</h2>
+
+<details>
+<summary>Solution 1</summary>
+<div class="solution">
+Let the first term be a and common difference be d.
+
+11th term: a + 10d = 38 ...(1)<br>
+16th term: a + 15d = 73 ...(2)
+
+Subtracting:
+
+5d = 35<br>
+d = 7
+
+From (1):
+
+a + 70 = 38<br>
+a = −32
+
+31st term = a + 30d<br>
+= −32 + 210
+
+<div class="answer">31st term = 178</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 2</summary>
+<div class="solution">
+Third term: a + 2d = 16 ...(1)
+
+Difference between the seventh and fifth terms:
+
+(a + 6d) − (a + 4d) = 12<br>
+2d = 12<br>
+d = 6
+
+Substitute in (1):
+
+a + 12 = 16<br>
+a = 4
+
+<div class="answer">AP: 4, 10, 16, 22, 28, …</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 3</summary>
+<div class="solution">
+Smallest three-digit multiple of 7 = 105<br>
+Largest three-digit multiple of 7 = 994
+
+a = 105; d = 7; last term = 994
+
+994 = 105 + (n − 1)7<br>
+889 = 7(n − 1)<br>
+127 = n − 1<br>
+n = 128
+
+<div class="answer">128 three-digit numbers are divisible by 7.</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 4</summary>
+<div class="solution">
+Smallest multiple of 4 greater than 10 = 12<br>
+Largest multiple of 4 less than 250 = 248
+
+a = 12; d = 4; last term = 248
+
+248 = 12 + (n − 1)4<br>
+236 = 4(n − 1)<br>
+59 = n − 1<br>
+n = 60
+
+<div class="answer">There are 60 multiples of 4.</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 5</summary>
+<div class="solution">
+Let the first term be a and common ratio be r.
+
+a + ar = −4<br>
+a(1 + r) = −4 ...(1)
+
+Fifth term = ar⁴ and third term = ar².
+
+ar⁴ = 4ar²<br>
+r² = 4<br>
+r = 2 or r = −2
+
+<strong>Case 1: r = 2</strong>
+
+3a = −4<br>
+a = −4/3
+
+GP: −4/3, −8/3, −16/3, …
+
+<strong>Case 2: r = −2</strong>
+
+−a = −4<br>
+a = 4
+
+GP: 4, −8, 16, −32, …
+
+<div class="answer">Both sequences satisfy the conditions.</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 6</summary>
+<div class="solution">
+Possible representations using consecutive natural numbers:
+
+One term:
+
+100 = 100
+
+Five terms:
+
+Let the middle term be x.
+
+5x = 100<br>
+x = 20
+
+100 = 18 + 19 + 20 + 21 + 22
+
+Eight terms:
+
+Let the first term be x.
+
+x + (x + 1) + … + (x + 7) = 100<br>
+8x + 28 = 100<br>
+8x = 72<br>
+x = 9
+
+100 = 9 + 10 + 11 + 12 + 13 + 14 + 15 + 16
+
+<div class="answer">
+100 = 100<br>
+100 = 18 + 19 + 20 + 21 + 22<br>
+100 = 9 + 10 + 11 + 12 + 13 + 14 + 15 + 16
+</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 7</summary>
+<div class="solution">
+Initial number = 30; the number doubles every hour.
+
+After 2 hours:
+
+30 × 2² = 30 × 4 = 120
+
+After 4 hours:
+
+30 × 2⁴ = 30 × 16 = 480
+
+After n hours:
+
+30 × 2ⁿ
+
+<div class="answer">2nd hour: 120; 4th hour: 480; nth hour: 30 × 2ⁿ</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 8</summary>
+<div class="solution">
+Let the first term be a and common difference be d.
+
+Fourth + eighth term:
+
+(a + 3d) + (a + 7d) = 24<br>
+a + 5d = 12 ...(1)
+
+Sixth + tenth term:
+
+(a + 5d) + (a + 9d) = 44<br>
+a + 7d = 22 ...(2)
+
+Subtracting:
+
+2d = 10<br>
+d = 5
+
+From (1):
+
+a + 25 = 12<br>
+a = −13
+
+<div class="answer">First three terms: −13, −8, −3</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 9</summary>
+<div class="solution">
+Sum of first n natural numbers:
+
+Sₙ = n(n + 1)/2
+
+We need Sₙ greater than 1000.
+
+For n = 44:
+
+S₄₄ = 44 × 45/2 = 990
+
+For n = 45:
+
+S₄₅ = 45 × 46/2 = 1035
+
+<div class="answer">Smallest n = 45</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 10</summary>
+<div class="solution">
+GP: 2, 8, 32, …
+
+a = 2; r = 8/2 = 4
+
+Explicit rule:
+
+tₙ = 2 × 4ⁿ⁻¹
+
+Checking 131072:
+
+2 × 4ⁿ⁻¹ = 131072<br>
+4ⁿ⁻¹ = 65536 = 4⁸<br>
+n − 1 = 8<br>
+n = 9
+
+Recursive rule:
+
+t₁ = 2<br>
+tₙ = 4tₙ₋₁, for n ≥ 2
+
+<div class="answer">131072 is the 9th term.</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 11</summary>
+<div class="solution">
+Let the three GP terms be a/r, a, ar.
+
+Their product is a³ = −1, so a = −1.
+
+The terms are −1/r, −1, −r.
+
+Their sum is 13/12:
+
+−1/r − 1 − r = 13/12
+
+Multiplying by 12r and simplifying:
+
+12r² + 25r + 12 = 0
+
+(4r + 3)(3r + 4) = 0
+
+Therefore, r = −3/4 or r = −4/3.
+
+<div class="answer">
+Common ratio = −3/4: terms 4/3, −1, 3/4<br>
+Common ratio = −4/3: terms 3/4, −1, 4/3
+</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 12</summary>
+<div class="solution">
+Let the first term be a and common ratio be r.
+
+Fourth term: x = ar³<br>
+Tenth term: y = ar⁹<br>
+Sixteenth term: z = ar¹⁵
+
+y/x = ar⁹/ar³ = r⁶
+
+z/y = ar¹⁵/ar⁹ = r⁶
+
+Thus y/x = z/y.
+
+<div class="answer">The three values x, y and z form a GP.</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 13</summary>
+<div class="solution">
+Let the three terms be a, ar and ar².
+
+Given:
+
+a + ar + ar² = 26 ...(1)<br>
+a² + a²r² + a²r⁴ = 364 ...(2)
+
+Dividing (2) by the square of (1):
+
+(1 + r² + r⁴)/(1 + r + r²)² = 364/676 = 7/13
+
+After simplifying:
+
+3r² − 10r + 3 = 0
+
+(3r − 1)(r − 3) = 0
+
+So r = 1/3 or r = 3.
+
+<strong>When r = 1/3:</strong>
+
+a(1 + 1/3 + 1/9) = 26<br>
+a(13/9) = 26<br>
+a = 18
+
+Terms: 18, 6, 2.
+
+<strong>When r = 3:</strong>
+
+a(1 + 3 + 9) = 26<br>
+13a = 26<br>
+a = 2
+
+Terms: 2, 6, 18.
+
+<div class="answer">The GP terms are 18, 6, 2 or 2, 6, 18.</div>
+</div>
+</details>
+
+<details>
+<summary>Solution 14</summary>
+<div class="solution">
+Given P₁ = 1, P₂ = 2, and each later term equals the sum of all previous terms plus 1.
+
+P₃ = 1 + 2 + 1 = 4<br>
+P₄ = 1 + 2 + 4 + 1 = 8<br>
+P₅ = 1 + 2 + 4 + 8 + 1 = 16<br>
+P₆ = 32<br>
+P₇ = 64<br>
+P₈ = 128
+
+<div class="answer">Terms: 1, 2, 4, 8, 16, 32, 64, 128</div>
+
+Each term doubles the previous term.
+
+Recursive rule: P₁ = 1; Pₙ = 2Pₙ₋₁.
+
+Explicit rule: Pₙ = 2ⁿ⁻¹.
+</div>
+</details>
+
+<details>
+<summary>Solution 15</summary>
+<div class="solution">
+Given W₁ = 1, W₂ = 2, and each later term is the sum of all terms up to two positions earlier, plus 2.
+
+W₃ = W₁ + 2 = 3<br>
+W₄ = W₁ + W₂ + 2 = 5<br>
+W₅ = W₁ + W₂ + W₃ + 2 = 8<br>
+W₆ = 1 + 2 + 3 + 5 + 2 = 13<br>
+W₇ = 1 + 2 + 3 + 5 + 8 + 2 = 21<br>
+W₈ = 1 + 2 + 3 + 5 + 8 + 13 + 2 = 34
+
+<div class="answer">Terms: 1, 2, 3, 5, 8, 13, 21, 34</div>
+
+This is the Virahanka–Fibonacci sequence.
+</div>
+</details>
+</section>
+
+<section class="card">
+<h2>Quick Revision</h2>
+
+<details>
+<summary>What is a sequence?</summary>
+<div class="solution">
+A sequence is an ordered list of numbers in which each number is called a term.
+</div>
+</details>
+
+<details>
+<summary>What makes a sequence an AP?</summary>
+<div class="solution">
+The difference between consecutive terms stays constant.
+</div>
+</details>
+
+<details>
+<summary>What makes a sequence a GP?</summary>
+<div class="solution">
+The ratio of a term to the preceding term stays constant, provided the ratio is defined.
+</div>
+</details>
+
+<details>
+<summary>What is the difference between explicit and recursive rules?</summary>
+<div class="solution">
+An explicit rule calculates a term directly from its position. A recursive rule calculates a term using one or more previous terms.
+</div>
+</details>
+
+<div class="note">
+<strong>Accuracy note:</strong> Check the final solution set against your exact 2026–27 textbook before publishing. This page covers the three exercise sets and the 15 end-of-chapter solution entries listed above.
+</div>
+</section>
+</main>
+
+<footer>© Academix by Tiwari | Learn Smarter</footer>
+</body>
+</html>
