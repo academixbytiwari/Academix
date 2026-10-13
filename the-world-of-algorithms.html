@@ -1,0 +1,426 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 9 Maths Chapter 11 – The World of Algorithms | Academix</title>
+<meta name="description" content="Class 9 Ganita Manjari Chapter 11 solutions: exercise-wise answers, algorithms, GCD, Euclid's algorithm and end-of-chapter exercises.">
+<style>
+:root {
+  --navy:#142b4a;
+  --blue:#087eaa;
+  --cyan:#eaf8ff;
+  --green:#eaf8ef;
+  --border:#dce5ee;
+  --text:#26374a;
+  --muted:#64748b;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:#f4f8fc;color:var(--text);
+  font-family:Arial,Helvetica,sans-serif;line-height:1.7
+}
+header{
+  background:linear-gradient(125deg,#102542,#087eaa);
+  color:white;padding:35px 18px
+}
+.hero,main{max-width:950px;margin:auto}
+header h1{font-size:clamp(27px,5vw,42px);line-height:1.2;margin:8px 0}
+header p{margin:8px 0;color:#e4f6ff}
+.tag{font-size:13px;letter-spacing:1px;text-transform:uppercase}
+main{padding:20px 14px 50px}
+nav,.card{
+  background:white;border:1px solid var(--border);
+  border-radius:15px;padding:20px;margin:16px 0;
+  box-shadow:0 4px 15px #142b4a08
+}
+nav a{
+  display:inline-block;margin:5px 8px 5px 0;padding:7px 11px;
+  background:var(--cyan);color:#075985;text-decoration:none;
+  border-radius:7px;font-size:14px
+}
+h2{color:var(--navy);font-size:25px;margin-top:0}
+h3{color:#075985;font-size:19px}
+h4{margin-bottom:7px;color:var(--navy)}
+p{margin:8px 0}
+.solution{
+  background:var(--green);border-left:4px solid #23945d;
+  border-radius:8px;padding:13px 15px;margin:10px 0
+}
+.formula{
+  background:var(--cyan);border-left:4px solid var(--blue);
+  padding:12px 15px;border-radius:8px;margin:12px 0;
+  overflow-wrap:anywhere
+}
+.question{
+  border:1px solid var(--border);border-radius:11px;
+  padding:15px;margin:14px 0;background:#fff
+}
+summary{cursor:pointer;font-weight:bold;color:var(--navy)}
+details{margin-top:10px}
+ol,ul{padding-left:24px}
+code,.math{font-family:Consolas,monospace;overflow-wrap:anywhere}
+footer{text-align:center;color:var(--muted);padding:24px;font-size:13px}
+.small{font-size:14px;color:var(--muted)}
+@media(max-width:600px){
+  nav,.card{padding:15px}
+  h2{font-size:22px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hero">
+    <div class="tag">Academix by Tiwari · Class 9 Mathematics</div>
+    <h1>Chapter 11: The World of Algorithms</h1>
+    <p>Ganita Manjari Part II · Exercise-wise solutions</p>
+    <p>Step-by-step explanations in simple language.</p>
+  </div>
+</header>
+
+<main>
+<nav>
+  <strong>Jump to section:</strong><br>
+  <a href="#basics">Key Concepts</a>
+  <a href="#ex111">Exercise 11.1</a>
+  <a href="#reflect1">Think & Reflect 1</a>
+  <a href="#ex112">Exercise 11.2</a>
+  <a href="#reflect2">Think & Reflect 2</a>
+  <a href="#ex113">Exercise 11.3</a>
+  <a href="#eoc">End-of-Chapter</a>
+</nav>
+
+<section class="card" id="basics">
+<h2>Key Concepts</h2>
+<ul>
+<li><b>Algorithm:</b> A clear sequence of steps used to solve a problem.</li>
+<li><b>Divisor:</b> A number that divides another number with remainder zero.</li>
+<li><b>GCD:</b> The greatest positive number that divides both given numbers.</li>
+<li><b>LCM:</b> The smallest positive number that is a multiple of both given numbers.</li>
+<li><b>Prime number:</b> A whole number greater than 1 with exactly two positive divisors: 1 and itself.</li>
+</ul>
+<div class="formula">
+<b>Euclid's division algorithm</b><br>
+gcd(m,n) = gcd(n, remainder when m is divided by n).<br>
+When the remainder becomes 0, the last non-zero divisor is the GCD.
+</div>
+<div class="formula">
+<b>LCM formula</b><br>
+LCM(m,n) = (m × n) ÷ GCD(m,n)
+</div>
+</section>
+
+<section class="card" id="ex111">
+<h2>Exercise Set 11.1 — Addition Algorithm</h2>
+
+<div class="question">
+<h3>Q1. Follow the written algorithm to add two four-digit numbers.</h3>
+<div class="solution">
+Example: 4728 + 3695
+
+<ul>
+<li>Units: 8 + 5 = 13. Write 3; carry 1.</li>
+<li>Tens: 2 + 9 + 1 = 12. Write 2; carry 1.</li>
+<li>Hundreds: 7 + 6 + 1 = 14. Write 4; carry 1.</li>
+<li>Thousands: 4 + 3 + 1 = 8. Carry becomes 0.</li>
+</ul>
+<b>Answer: 8423</b>
+</div>
+</div>
+
+<div class="question">
+<h3>Q2. What if a five-digit number is added to a three-digit number?</h3>
+<div class="solution">
+Example: 42536 + 178
+
+Align the numbers on the right:
+<pre>  42536
++   178
+-------
+  42714</pre>
+Units: 6 + 8 = 14, write 4 and carry 1.<br>
+Tens: 3 + 7 + 1 = 11, write 1 and carry 1.<br>
+Hundreds: 5 + 1 + 1 = 7.<br>
+The remaining digits 2 and 4 have no matching digits in 178. Treat the missing digits as zero: the remaining digits are copied into the answer.
+<br><b>Answer: 42714.</b> A fully precise algorithm should explicitly say to treat missing digits as zero.
+</div>
+</div>
+
+<div class="question">
+<h3>Q3. Why should place-value columns be aligned from the right?</h3>
+<div class="solution">
+The rightmost column contains units, the next contains tens, then hundreds and thousands. Aligning from the right puts units under units, tens under tens and so on. This ensures that only digits of the same place value are added.
+</div>
+</div>
+
+<div class="question">
+<h3>Q4. Why can the carry never exceed 1?</h3>
+<div class="solution">
+The greatest possible column sum is 9 + 9 + 1 = 19. Since 19 contains only one complete group of ten, the carry can only be 0 or 1. It can never be 2 or more.
+</div>
+</div>
+
+<div class="question">
+<h3>Q5. What happens if the final-carry step is omitted?</h3>
+<div class="solution">
+<b>Case where the answer is still correct:</b><br>
+123 + 456 = 579. There is no final carry, so omitting that step makes no difference.<br><br>
+<b>Case where the answer fails:</b><br>
+999 + 1 produces 000 in the three existing columns and leaves a final carry of 1. Without writing that carry, the answer would incorrectly be 000 instead of 1000.
+</div>
+</div>
+</section>
+
+<section class="card" id="reflect1">
+<h2>Think and Reflect — Addition</h2>
+
+<div class="question">
+<h3>1. Why does the column-addition algorithm work?</h3>
+<div class="solution">
+Every digit represents a place value: units, tens, hundreds and so on. When a column sum reaches 10 or more, its units digit stays in that column and the extra ten is carried to the next column. Since ten units equal one ten, ten tens equal one hundred, and so on, carrying preserves the total value. Repeating this process gives the correct sum.
+</div>
+</div>
+
+<div class="question">
+<h3>2. How can the algorithm add decimal fractions?</h3>
+<div class="solution">
+Align the decimal points first. Add zeros to the end of a decimal if necessary, so both numbers have the same number of decimal places. Add the columns from right to left and put the decimal point in the answer directly below the aligned decimal points.
+<br><br>
+Example: 4.7 + 12.85 = 4.70 + 12.85 = <b>17.55</b>.
+</div>
+</div>
+</section>
+
+<section class="card" id="ex112">
+<h2>Exercise Set 11.2 — Lists, Divisors and LCM</h2>
+
+<div class="question">
+<h3>Q1. Write algorithms to find elements unique to each of two increasing lists.</h3>
+<div class="solution">
+<b>(i) Elements in List 1 that are not in List 2:</b>
+<ol>
+<li>Create an empty result list.</li>
+<li>Check each element of List 1.</li>
+<li>If an element does not occur in List 2, add it to the result list.</li>
+<li>Report the result list.</li>
+</ol>
+<b>(ii) Elements in List 2 that are not in List 1:</b>
+Use the same steps, but switch the roles of List 1 and List 2.
+<br><br>
+Example: List 1 = [1, 2, 3, 6] and List 2 = [1, 3, 5, 9].<br>
+(i) Result: [2, 6].<br>
+(ii) Result: [5, 9].
+</div>
+</div>
+
+<div class="question">
+<h3>Q2. Describe an algorithm to calculate the LCM of two numbers.</h3>
+<div class="solution">
+<b>Method 1:</b> List the multiples of each number in increasing order. The first multiple appearing in both lists is their LCM.<br><br>
+<b>Method 2:</b> Find the GCD first and use:
+<div class="formula">LCM(m,n) = (m × n) ÷ GCD(m,n)</div>
+Example: Find LCM(18,24).<br>
+24 = 1 × 18 + 6, and 18 = 3 × 6 + 0, so GCD = 6.<br>
+LCM = (18 × 24) ÷ 6 = 432 ÷ 6.<br>
+<b>Answer: 72.</b>
+</div>
+</div>
+
+<div class="question">
+<h3>Q3. Divisors occur in pairs. Answer both parts.</h3>
+<div class="solution">
+<b>(i) How many numbers must be checked?</b><br>
+A divisor d pairs with n ÷ d. One number in each pair must be at most √n. Therefore, checking possible divisors from 1 up to √n is enough. Whenever j divides n, record both j and n ÷ j, taking care not to record a square root twice when n is a perfect square.
+<br><br>
+Example: For 18, √18 is about 4.24. Check 1, 2, 3 and 4. This finds the pairs (1,18), (2,9) and (3,6).
+<br><br>
+<b>(ii) Would the original GCD algorithm still work unchanged?</b><br>
+No. Divisor pairs are not automatically produced in increasing order. The original method uses the last element of an increasing list to find the GCD. With unsorted pairs, we must either sort the list or keep track of the largest common divisor found.
+</div>
+</div>
+</section>
+
+<section class="card" id="reflect2">
+<h2>Think and Reflect — Divisors and GCD</h2>
+
+<div class="question">
+<h3>1. Find the divisors of 15, 135 and 775. How does the amount of work grow?</h3>
+<div class="solution">
+<b>Divisors of 15:</b> 1, 3, 5, 15. The basic algorithm checks 15 numbers.<br>
+<b>Divisors of 135:</b> 1, 3, 5, 9, 15, 27, 45, 135. It checks 135 numbers.<br>
+<b>Divisors of 775:</b> 1, 5, 25, 31, 155, 775. It checks 775 numbers.<br><br>
+The basic method checks every number from 1 to n, so the work grows in proportion to n. Checking only up to √n and using divisor pairs can reduce the work.
+</div>
+</div>
+
+<div class="question">
+<h3>2. What if we check common divisors backwards from min(m,n)?</h3>
+<div class="solution">
+Start with the smaller of m and n and test downward. The first number that divides both exactly is the GCD, because all larger possible candidates have already been checked and rejected.
+<br><br>
+Example: m = 12 and n = 18. Start at 12. The first common divisor encountered is 6. Therefore, GCD(12,18) = <b>6</b>, and the algorithm can stop immediately.
+</div>
+</div>
+</section>
+
+<section class="card" id="ex113">
+<h2>Exercise Set 11.3 — Improving the GCD Algorithm</h2>
+
+<div class="question">
+<h3>Q1. What changes if divisors are examined from n down to 1?</h3>
+<div class="solution">
+The set of divisors does not change, but their order becomes decreasing rather than increasing.
+<br><br>
+Example: Divisors of 12 in decreasing order are 12, 6, 4, 3, 2, 1.
+<br><br>
+If both divisor lists are decreasing, their common divisors will also be found in decreasing order when checked consistently. The largest common divisor is then the first common divisor, or the leftmost entry, rather than the rightmost.
+</div>
+</div>
+
+<div class="question">
+<h3>Q2. What happens when common divisors are checked backwards?</h3>
+<div class="solution">
+Let k = min(m,n). Test k, k − 1, k − 2, and so on. As soon as a number divides both m and n exactly, report it as the GCD and stop. It is the greatest common divisor because every larger candidate was already checked.
+<br><br>
+Example: For 12 and 18, begin with 12 and move downward. The first common divisor is 6, so GCD(12,18) = <b>6</b>.
+</div>
+</div>
+</section>
+
+<section class="card" id="eoc">
+<h2>End-of-Chapter Exercises</h2>
+
+<div class="question">
+<h3>Q1. Find the GCDs using the improved Euclid division algorithm.</h3>
+<div class="solution">
+<b>(i) GCD(375, 825)</b>
+<div class="formula">
+825 = 2 × 375 + 75<br>
+375 = 5 × 75 + 0<br>
+<b>GCD = 75</b>
+</div>
+
+<b>(ii) GCD(51000, 81000)</b>
+<div class="formula">
+81000 = 1 × 51000 + 30000<br>
+51000 = 1 × 30000 + 21000<br>
+30000 = 1 × 21000 + 9000<br>
+21000 = 2 × 9000 + 3000<br>
+9000 = 3 × 3000 + 0<br>
+<b>GCD = 3000</b>
+</div>
+
+<b>(iii) GCD(1789287, 237656)</b>
+<div class="formula">
+1789287 = 7 × 237656 + 125695<br>
+237656 = 1 × 125695 + 111961<br>
+125695 = 1 × 111961 + 13734<br>
+111961 = 8 × 13734 + 2089<br>
+13734 = 6 × 2089 + 1200<br>
+2089 = 1 × 1200 + 889<br>
+1200 = 1 × 889 + 311<br>
+889 = 2 × 311 + 267<br>
+311 = 1 × 267 + 44<br>
+267 = 6 × 44 + 3<br>
+44 = 14 × 3 + 2<br>
+3 = 1 × 2 + 1<br>
+2 = 2 × 1 + 0<br>
+<b>GCD = 1</b>
+</div>
+
+<b>(iv) GCD(2587392, 157656)</b>
+<div class="formula">
+2587392 = 16 × 157656 + 64896<br>
+157656 = 2 × 64896 + 27864<br>
+64896 = 2 × 27864 + 9168<br>
+27864 = 3 × 9168 + 360<br>
+9168 = 25 × 360 + 168<br>
+360 = 2 × 168 + 24<br>
+168 = 7 × 24 + 0<br>
+<b>GCD = 24</b>
+</div>
+</div>
+</div>
+
+<div class="question">
+<h3>Q2. Explain why the common divisors of m and n are the same as those of n and the remainder.</h3>
+<div class="solution">
+Assume m ≥ n. By division, write:
+<div class="formula">m = qn + r, where r = m mod n.</div>
+<b>Forward:</b> If d divides both m and n, then d divides qn. It must also divide their difference m − qn = r. Thus d divides both n and r.
+<br><br>
+<b>Reverse:</b> If d divides both n and r, then it divides qn and r. Therefore, it divides qn + r = m. Thus d divides both m and n.
+<br><br>
+So both pairs have exactly the same common divisors, which proves:
+<div class="formula">GCD(m,n) = GCD(n, m mod n)</div>
+</div>
+</div>
+
+<div class="question">
+<h3>Q3. Write an algorithm to test whether n is prime.</h3>
+<div class="solution">
+<ol>
+<li>Find all positive divisors of n.</li>
+<li>Count the divisors.</li>
+<li>If there are exactly two divisors, report that n is prime.</li>
+<li>Otherwise, report that n is not prime.</li>
+</ol>
+Example: Divisors of 7 are [1,7], so 7 is prime. Divisors of 8 are [1,2,4,8], so 8 is not prime.
+<br><br>
+Note: This test assumes n is greater than 1; 0 and 1 are not prime.
+</div>
+</div>
+
+<div class="question">
+<h3>Q4. Write an algorithm to find the prime divisors of n.</h3>
+<div class="solution">
+<ol>
+<li>Find the complete list of divisors of n.</li>
+<li>Create an empty list for prime divisors.</li>
+<li>Check each divisor using the prime-number test.</li>
+<li>Add only prime divisors to the result list.</li>
+<li>Report the result.</li>
+</ol>
+Example: Divisors of 18 are [1,2,3,6,9,18]. The prime divisors are <b>[2,3]</b>.
+</div>
+</div>
+
+<div class="question">
+<h3>Q5. Describe a prime-factorisation algorithm and how to compare two results.</h3>
+<div class="solution">
+Start with the number n and an empty list of prime/exponent pairs. Find the smallest prime that divides the current number. Count how many times it divides exactly, record the prime and its exponent, and divide it out. Repeat until the remaining number is 1.
+<br><br>
+<b>(i) Represent 180:</b>
+<div class="formula">180 = 2² × 3² × 5¹</div>
+As pairs: <b>[(2,2), (3,2), (5,1)]</b>.
+<br><br>
+<b>(ii) Compare two factorisations:</b><br>
+Align the prime numbers in both lists. Treat a missing prime as having exponent zero. For the GCD, use the smaller exponent of each shared prime. For the LCM, use the larger exponent of every prime appearing in either number.
+<br><br>
+Example: 180 = 2² × 3² × 5 and 84 = 2² × 3 × 7.<br>
+GCD = 2² × 3 = <b>12</b>.<br>
+LCM = 2² × 3² × 5 × 7 = <b>1260</b>.
+</div>
+</div>
+</section>
+
+<section class="card">
+<h2>Quick Revision</h2>
+<ul>
+<li>An algorithm must be clear, ordered and precise.</li>
+<li>Column addition uses carrying to move extra tens to the next place value.</li>
+<li>Divisor pairs can reduce checks to about √n.</li>
+<li>Euclid's subtraction method repeatedly subtracts the smaller number.</li>
+<li>The division method uses remainders and is generally much faster.</li>
+<li>GCD uses the smaller exponents in prime factorisation; LCM uses the larger exponents.</li>
+</ul>
+</section>
+
+<p class="small">Study note: These explanations are written in student-friendly language. Compare them with your own 2026–27 textbook before treating this page as a final verified answer key.</p>
+</main>
+
+<footer>Academix by Tiwari · Learn Smarter</footer>
+</body>
+</html>
