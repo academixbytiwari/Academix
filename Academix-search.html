@@ -719,23 +719,47 @@ solveBtn.addEventListener("click", async () => {
     formData.append("image", selectedFile);
     formData.append("question", searchInput.value.trim());
 
+    
+const AI_SOLVER_ENDPOINT = "https://vedai.anavy0515.workers.dev/api/solve";
+
+solveBtn.addEventListener("click", async () => {
+  const question = searchInput.value.trim();
+
+  if (!question) {
+    solverMessage.textContent =
+      "Please type your question in the search box first.";
+    solver.classList.add("show");
+    searchInput.focus();
+    return;
+  }
+
+  solver.classList.add("show");
+  solver.scrollIntoView({ behavior: "smooth", block: "center" });
+
+  solveBtn.disabled = true;
+  solveBtn.textContent = "Solving...";
+  solverMessage.textContent = "AI is working on your question...";
+
+  try {
     const response = await fetch(AI_SOLVER_ENDPOINT, {
       method: "POST",
-      body: formData
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ question })
     });
-
-    if (!response.ok) {
-      throw new Error("Solver returned HTTP " + response.status);
-    }
 
     const data = await response.json();
 
+    if (!response.ok) {
+      throw new Error(data.error || "Solver returned HTTP " + response.status);
+    }
+
     solverMessage.textContent =
-      data.solution || data.answer || data.text ||
-      "The solver returned no solution text.";
+      data.answer || data.reply || "The AI returned no answer.";
   } catch (error) {
     solverMessage.textContent =
-      "Could not solve the image: " + error.message;
+      "Could not solve the question: " + error.message;
   } finally {
     solveBtn.disabled = false;
     solveBtn.textContent = "Solve Question";
