@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about Academix by Tiwari, an educational platform organised around classes, subjects and chapters.">
+  <meta name="robots" content="index, follow">
+  <title>About Us | Academix by Tiwari</title>
+  <link rel="canonical" href="https://academixbytiwari.github.io/Academix/about.html">
+  <style>
+    :root{--bg:#030712;--panel:rgba(9,20,38,.88);--text:#f8fafc;--muted:#94a3b8;--cyan:#00d9ff;--purple:#8b5cf6;--line:rgba(0,217,255,.17);--link:#38bdf8}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.7;padding:0 18px;overflow-x:hidden}
+    body.light-theme{--bg:#f4f8fc;--panel:#fff;--text:#102033;--muted:#536579;--line:rgba(2,132,199,.2);--link:#0877bd}
+    a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
+    .topbar{max-width:1050px;margin:auto;height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+    .brand{font-size:19px;font-weight:800;color:var(--text);letter-spacing:-.4px}.brand span{color:var(--cyan)}
+    .top-actions{display:flex;gap:10px;align-items:center}
+    .top-actions a,.theme-btn{border:1px solid var(--line);border-radius:10px;padding:8px 13px;background:var(--panel);color:var(--text);font:inherit;font-size:13px}
+    .theme-btn{cursor:pointer}
+    main{max-width:850px;margin:64px auto 75px}
+    .eyebrow{display:inline-block;color:var(--cyan);font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;border:1px solid var(--line);border-radius:30px;padding:6px 12px;background:rgba(0,217,255,.05)}
+    h1{font-size:clamp(36px,7vw,58px);line-height:1.1;letter-spacing:-2px;margin:20px 0 16px}h1 span{color:var(--cyan)}
+    .lead{font-size:18px;color:var(--muted);max-width:720px}
+    .content{margin-top:35px;padding:30px;border:1px solid var(--line);border-radius:20px;background:var(--panel);box-shadow:0 20px 55px rgba(0,0,0,.12)}
+    h2{font-size:21px;margin:25px 0 9px}h2:first-child{margin-top:0}p{color:var(--muted);margin:0 0 14px}
+    ul{padding-left:22px;color:var(--muted);margin:8px 0 18px}li{padding:3px 0}
+    .footer{max-width:1050px;margin:auto;padding:22px 0 30px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;color:var(--muted);font-size:13px}
+    .footer-links{display:flex;flex-wrap:wrap;gap:16px}
+    @media(max-width:600px){.topbar{height:68px}.brand{font-size:16px}.top-actions a{display:none}main{margin:42px auto 55px}.content{padding:22px 18px}.footer{align-items:flex-start;flex-direction:column}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">Academix <span>by Tiwari</span></a>
+    <div class="top-actions">
+      <a href="index.html">Home</a>
+      <button class="theme-btn" id="themeToggle" type="button" aria-label="Toggle light and dark theme">☀️ / 🌙</button>
+    </div>
+  </header>
+
+  <main>
+    <span class="eyebrow">About Academix</span>
+    <h1>Learn smarter.<br><span>One chapter at a time.</span></h1>
+    <p class="lead">Academix by Tiwari is an educational website designed to make learning resources easier to find through a simple class, subject and chapter-based structure.</p>
+
+    <section class="content">
+      <h2>What is Academix?</h2>
+      <p>Academix by Tiwari is a learning-focused platform for students. Its homepage helps learners select their class, subject and chapter so they can navigate to the relevant study material.</p>
+
+      <h2>Our purpose</h2>
+      <p>Our aim is to keep learning organised and accessible. We want students to spend less time searching through confusing menus and more time understanding the topics they are studying.</p>
+
+      <h2>What you can find here</h2>
+      <ul>
+        <li>Class-wise learning navigation.</li>
+        <li>Subject-wise organisation.</li>
+        <li>Chapter-wise access to available study material.</li>
+      </ul>
+
+      <h2>Our approach</h2>
+      <p>We aim to keep the website simple, useful and easy to navigate. Website content and features may be updated over time to improve the learning experience.</p>
+
+      <h2>Explore Academix</h2>
+      <p>Visit the <a href="index.html">Academix homepage</a> to choose a class, subject and chapter.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Academix by Tiwari</span>
+    <nav class="footer-links" aria-label="Footer links">
+      <a href="about.html">About Us</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+    </nav>
+  </footer>
+
+  <script>
+    const body = document.body;
+    const toggle = document.getElementById('themeToggle');
+    if (localStorage.getItem('academix-theme') === 'light') body.classList.add('light-theme');
+    toggle.addEventListener('click', () => {
+      body.classList.toggle('light-theme');
+      localStorage.setItem('academix-theme', body.classList.contains('light-theme') ? 'light' : 'dark');
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
