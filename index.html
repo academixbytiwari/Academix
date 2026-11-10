@@ -5574,15 +5574,14 @@ openChapterBtn.addEventListener("click", function () {
     }
 
     // Convert chapter name into its HTML filename
-    function makeChapterFilename(name) {
-        return name
-            .normalize("NFKD")
-            .toLowerCase()
-            .replace(/[’‘']/g, "")
-            .replace(/[^a-z0-9]+/g, "-")
-            .replace(/^-+|-+$/g, "")
-            + ".html";
-    }
+  
+function makeChapterFilename(name) {
+    return name
+        .trim()
+        .replace(/[^\p{L}\p{N}]+/gu, "-")
+        .replace(/^-+|-+$/g, "")
+        + ".html";
+}
 
     // Generate the chapter filename
     const chapterFile = makeChapterFilename(selectedChapter);
