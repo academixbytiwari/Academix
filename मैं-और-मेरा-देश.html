@@ -1,0 +1,568 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>मैं और मेरा देश | Academix by Tiwari</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --primary: #245b9e;
+    --secondary: #eaf2fc;
+    --text: #263449;
+    --muted: #68778b;
+    --border: #e2e8f0;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans Devanagari', sans-serif;
+    background: #f3f6fa;
+    color: var(--text);
+    line-height: 1.9;
+}
+
+.container {
+    max-width: 950px;
+    margin: auto;
+    padding: 25px 18px 60px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    gap: 10px;
+}
+
+.brand {
+    font-weight: 800;
+    color: var(--primary);
+    font-size: 17px;
+}
+
+.back {
+    text-decoration: none;
+    color: var(--primary);
+    background: white;
+    border: 1px solid var(--border);
+    padding: 8px 15px;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+.hero {
+    background: linear-gradient(135deg, #e5efff, #ffffff);
+    border: 1px solid #dce8f8;
+    border-radius: 22px;
+    padding: 35px 30px;
+    margin-bottom: 22px;
+}
+
+.tag {
+    display: inline-block;
+    background: #d8e8ff;
+    color: #245b9e;
+    padding: 5px 13px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: clamp(27px, 5vw, 39px);
+    color: #183d6b;
+    margin-bottom: 8px;
+}
+
+.hero p {
+    color: #60738b;
+    font-size: 14px;
+}
+
+.card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 17px;
+    padding: 25px;
+    margin-bottom: 19px;
+    box-shadow: 0 5px 18px rgba(30, 55, 90, 0.035);
+}
+
+.card h2 {
+    color: #214f86;
+    font-size: 21px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+}
+
+.card h3 {
+    color: #315d8e;
+    font-size: 16px;
+    margin: 17px 0 7px;
+}
+
+.card p {
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.author {
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+}
+
+.author img {
+    width: 155px;
+    height: 155px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 4px solid #edf3fb;
+}
+
+.author-info {
+    flex: 1;
+}
+
+.author-info h3 {
+    margin-top: 0;
+}
+
+.points {
+    padding-left: 22px;
+    font-size: 14px;
+}
+
+.points li {
+    margin-bottom: 9px;
+}
+
+.meaning {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.word {
+    background: #f5f8fc;
+    border: 1px solid #e7edf5;
+    border-radius: 10px;
+    padding: 10px 13px;
+    font-size: 13px;
+}
+
+.word strong {
+    color: #245b9e;
+}
+
+.qa {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.qa:last-child {
+    border-bottom: none;
+}
+
+.question {
+    font-weight: 700;
+    color: #254e7b;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+.answer {
+    font-size: 14px;
+    color: #46566a;
+}
+
+.mcq {
+    background: #f7f9fc;
+    border: 1px solid #e8edf4;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 13px;
+}
+
+.mcq p {
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.options {
+    font-size: 13px;
+    color: #59677a;
+    margin-bottom: 8px;
+}
+
+.correct {
+    color: #16734b;
+    font-weight: 700;
+    font-size: 13px;
+    background: #e9f7ef;
+    padding: 7px 11px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.message {
+    background: #edf4ff;
+    border-left: 4px solid #4d83c5;
+    padding: 16px;
+    border-radius: 9px;
+    font-size: 14px;
+}
+
+.footer {
+    text-align: center;
+    color: #8995a5;
+    font-size: 12px;
+    padding-top: 18px;
+}
+
+@media(max-width:600px) {
+    .container {
+        padding: 15px 12px 40px;
+    }
+
+    .hero {
+        padding: 25px 20px;
+    }
+
+    .card {
+        padding: 19px;
+    }
+
+    .author {
+        flex-direction: column;
+    }
+
+    .author img {
+        width: 135px;
+        height: 135px;
+    }
+
+    .meaning {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="topbar">
+        <div class="brand">ACADEMIX BY TIWARI</div>
+        <a href="hindi-9.html" class="back"></a>
+    </div>
+
+    <header class="hero">
+        <span class="tag">कक्षा 9 • हिंदी • गद्य खंड</span>
+        <h1>मैं और मेरा देश</h1>
+        <p>लेखक — कन्हैयालाल मिश्र 'प्रभाकर'</p>
+    </header>
+
+    <section class="card">
+        <h2>📖 पाठ का परिचय</h2>
+        <p>
+            'मैं और मेरा देश' एक विचारप्रधान निबंध है।
+            इसमें लेखक ने व्यक्ति और देश के बीच गहरे संबंध
+            को समझाया है। लेखक के अनुसार किसी व्यक्ति की
+            पहचान केवल उसके घर और नगर से नहीं, बल्कि
+            उसके देश से भी जुड़ी होती है।
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>✍️ लेखक परिचय</h2>
+
+        <div class="author">
+            <img
+    src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Kanhaiyalal_Mishra_Prabhakar.jpg"
+    alt="कन्हैयालाल मिश्र प्रभाकर"
+    onerror="this.style.display='none'"
+>
+            <div class="author-info">
+                <h3>कन्हैयालाल मिश्र 'प्रभाकर'</h3>
+                <p>
+                    कन्हैयालाल मिश्र 'प्रभाकर' हिंदी के प्रसिद्ध
+                    निबंधकार, पत्रकार और स्वतंत्रता सेनानी थे।
+                    उनका जन्म 29 मई 1906 को देवबंद,
+                    सहारनपुर में हुआ था।
+                </p>
+                <p>
+                    उन्होंने हिंदी साहित्य और पत्रकारिता के
+                    क्षेत्र में महत्वपूर्ण योगदान दिया।
+                    उनकी प्रमुख रचनाओं में 'दीप जले शंख बजे',
+                    'जिंदगी मुसकराई' और 'माटी हो गई सोना'
+                    शामिल हैं। उनका निधन 9 मई 1995 को हुआ।
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>📚 अध्याय की सरल व्याख्या</h2>
+
+        <h3>1. व्यक्ति और उसका परिवेश</h3>
+        <p>
+            लेखक बताता है कि मनुष्य अपने घर में जन्म लेता है,
+            पड़ोस में बड़ा होता है और नगर के समाज से बहुत
+            कुछ सीखता है। परिवार, पड़ोस और समाज मिलकर
+            उसके व्यक्तित्व का निर्माण करते हैं।
+        </p>
+
+        <h3>2. देश के महत्व का एहसास</h3>
+        <p>
+            लेखक को पहले लगता था कि उसका जीवन पूरा है।
+            लेकिन लाला लाजपत राय के अनुभव से उसे समझ आया
+            कि व्यक्ति की प्रतिष्ठा उसके देश की प्रतिष्ठा से
+            भी जुड़ी होती है। यदि देश का सम्मान नहीं है,
+            तो नागरिक भी उसका प्रभाव महसूस करता है।
+        </p>
+
+        <h3>3. देश के प्रति जिम्मेदारी</h3>
+        <p>
+            लेखक समझाता है कि देश के नागरिकों को ऐसे काम
+            करने चाहिए जिनसे देश का सम्मान और विकास बढ़े।
+            प्रत्येक व्यक्ति को अपने अधिकारों के साथ-साथ
+            अपने कर्तव्यों को भी समझना चाहिए।
+        </p>
+
+        <h3>4. शक्ति-बोध और सौंदर्य-बोध</h3>
+        <p>
+            लेखक देश में शक्ति-बोध अर्थात आत्मविश्वास और
+            सौंदर्य-बोध अर्थात सुंदरता, स्वच्छता तथा अच्छे
+            व्यवहार की भावना को महत्वपूर्ण मानता है।
+            नागरिकों को इन दोनों गुणों को मजबूत बनाना चाहिए।
+        </p>
+
+        <h3>5. सही नागरिक की पहचान</h3>
+        <p>
+            लेखक के अनुसार नागरिकों को जागरूक होकर
+            अपने देश के हित में सही निर्णय लेने चाहिए।
+            देश की उन्नति में प्रत्येक नागरिक की भूमिका होती है।
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>⭐ पाठ का मुख्य संदेश</h2>
+        <div class="message">
+            व्यक्ति और देश एक-दूसरे से जुड़े हुए हैं।
+            देश का सम्मान ही नागरिक का सम्मान है।
+            इसलिए प्रत्येक व्यक्ति को ईमानदारी, जिम्मेदारी
+            और जागरूकता के साथ देश की उन्नति में योगदान देना चाहिए।
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>📌 महत्वपूर्ण शब्दार्थ</h2>
+
+        <div class="meaning">
+            <div class="word"><strong>अविभाज्य</strong> — जिसे अलग न किया जा सके</div>
+            <div class="word"><strong>पूर्णता</strong> — पूरा होने की अवस्था</div>
+            <div class="word"><strong>निजता</strong> — अपना निजी भाव</div>
+            <div class="word"><strong>आत्मसम्मान</strong> — स्वयं का सम्मान</div>
+            <div class="word"><strong>शक्ति-बोध</strong> — अपनी शक्ति का एहसास</div>
+            <div class="word"><strong>सौंदर्य-बोध</strong> — सुंदरता की समझ</div>
+            <div class="word"><strong>पराधीनता</strong> — दूसरों के अधीन होना</div>
+            <div class="word"><strong>प्रतिष्ठा</strong> — मान-सम्मान</div>
+            <div class="word"><strong>कर्तव्य</strong> — जिम्मेदारी</div>
+            <div class="word"><strong>सशक्त</strong> — शक्तिशाली</div>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>📝 महत्वपूर्ण प्रश्न-उत्तर</h2>
+
+        <div class="qa">
+            <div class="question">प्रश्न 1. 'मैं और मेरा देश' निबंध के लेखक कौन हैं?</div>
+            <div class="answer">
+                उत्तर — इस निबंध के लेखक कन्हैयालाल मिश्र 'प्रभाकर' हैं।
+            </div>
+        </div>
+
+        <div class="qa">
+            <div class="question">प्रश्न 2. लेखक को पहले अपना जीवन पूर्ण क्यों लगता था?</div>
+            <div class="answer">
+                उत्तर — लेखक को अपने घर, पड़ोस और नगर से प्रेम,
+                सहयोग तथा सम्मान मिलता था। इसलिए उसे लगता था
+                कि उसका जीवन पूर्ण हो गया है।
+            </div>
+        </div>
+
+        <div class="qa">
+            <div class="question">प्रश्न 3. लाला लाजपत राय के अनुभव से लेखक को क्या सीख मिली?</div>
+            <div class="answer">
+                उत्तर — लेखक को यह सीख मिली कि व्यक्ति का
+                सम्मान उसके देश के सम्मान से जुड़ा होता है।
+                देश की पराधीनता नागरिक के आत्मसम्मान को भी
+                प्रभावित करती है।
+            </div>
+        </div>
+
+        <div class="qa">
+            <div class="question">प्रश्न 4. शक्ति-बोध का क्या अर्थ है?</div>
+            <div class="answer">
+                उत्तर — शक्ति-बोध का अर्थ है अपनी क्षमता,
+                सामर्थ्य और शक्ति का एहसास होना।
+            </div>
+        </div>
+
+        <div class="qa">
+            <div class="question">प्रश्न 5. सौंदर्य-बोध का क्या अर्थ है?</div>
+            <div class="answer">
+                उत्तर — सौंदर्य-बोध का अर्थ है सुंदरता,
+                स्वच्छता और अच्छे वातावरण को समझने तथा
+                अपनाने की भावना।
+            </div>
+        </div>
+
+        <div class="qa">
+            <div class="question">प्रश्न 6. लेखक नागरिकों को क्या संदेश देता है?</div>
+            <div class="answer">
+                उत्तर — लेखक नागरिकों को देश के प्रति
+                जिम्मेदार बनने, अपने कर्तव्यों का पालन करने
+                और देश के सम्मान तथा विकास में योगदान देने
+                का संदेश देता है।
+            </div>
+        </div>
+
+        <div class="qa">
+            <div class="question">प्रश्न 7. व्यक्ति और देश का संबंध कैसा है?</div>
+            <div class="answer">
+                उत्तर — व्यक्ति और देश का संबंध बहुत गहरा
+                और अटूट है। व्यक्ति की पहचान और प्रतिष्ठा
+                उसके देश से भी जुड़ी होती है।
+            </div>
+        </div>
+
+        <div class="qa">
+            <div class="question">प्रश्न 8. देश की उन्नति में नागरिक की क्या भूमिका है?</div>
+            <div class="answer">
+                उत्तर — नागरिक ईमानदारी से काम करके,
+                नियमों का पालन करके, स्वच्छता बनाए रखकर
+                और सही निर्णय लेकर देश की उन्नति में
+                योगदान दे सकता है।
+            </div>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>🎯 महत्वपूर्ण बहुविकल्पीय प्रश्न (MCQ)</h2>
+
+        <div class="mcq">
+            <p>1. 'मैं और मेरा देश' निबंध के लेखक कौन हैं?</p>
+            <div class="options">
+                (क) प्रेमचंद<br>
+                (ख) कन्हैयालाल मिश्र 'प्रभाकर'<br>
+                (ग) मोहन राकेश<br>
+                (घ) शेखर जोशी
+            </div>
+            <div class="correct">सही उत्तर — (ख) कन्हैयालाल मिश्र 'प्रभाकर'</div>
+        </div>
+
+        <div class="mcq">
+            <p>2. लेखक के अनुसार व्यक्ति का सम्मान किससे जुड़ा है?</p>
+            <div class="options">
+                (क) केवल परिवार से<br>
+                (ख) केवल धन से<br>
+                (ग) देश के सम्मान से<br>
+                (घ) केवल नगर से
+            </div>
+            <div class="correct">सही उत्तर — (ग) देश के सम्मान से</div>
+        </div>
+
+        <div class="mcq">
+            <p>3. लाला लाजपत राय के अनुभव से लेखक को क्या समझ आया?</p>
+            <div class="options">
+                (क) धन का महत्व<br>
+                (ख) देश के सम्मान का महत्व<br>
+                (ग) शिक्षा का महत्व<br>
+                (घ) यात्रा का महत्व
+            </div>
+            <div class="correct">सही उत्तर — (ख) देश के सम्मान का महत्व</div>
+        </div>
+
+        <div class="mcq">
+            <p>4. शक्ति-बोध का अर्थ क्या है?</p>
+            <div class="options">
+                (क) धन का ज्ञान<br>
+                (ख) अपनी शक्ति का एहसास<br>
+                (ग) सुंदरता की समझ<br>
+                (घ) दूसरों का सम्मान
+            </div>
+            <div class="correct">सही उत्तर — (ख) अपनी शक्ति का एहसास</div>
+        </div>
+
+        <div class="mcq">
+            <p>5. सौंदर्य-बोध किससे संबंधित है?</p>
+            <div class="options">
+                (क) सुंदरता और स्वच्छता की समझ<br>
+                (ख) धन कमाने से<br>
+                (ग) खेल-कूद से<br>
+                (घ) यात्रा से
+            </div>
+            <div class="correct">सही उत्तर — (क) सुंदरता और स्वच्छता की समझ</div>
+        </div>
+
+        <div class="mcq">
+            <p>6. निबंध का मुख्य विषय क्या है?</p>
+            <div class="options">
+                (क) प्रकृति प्रेम<br>
+                (ख) व्यक्ति और देश का संबंध<br>
+                (ग) पारिवारिक जीवन<br>
+                (घ) मनोरंजन
+            </div>
+            <div class="correct">सही उत्तर — (ख) व्यक्ति और देश का संबंध</div>
+        </div>
+
+        <div class="mcq">
+            <p>7. लेखक नागरिकों से क्या अपेक्षा करता है?</p>
+            <div class="options">
+                (क) केवल अपने बारे में सोचें<br>
+                (ख) जिम्मेदार नागरिक बनें<br>
+                (ग) समाज से दूर रहें<br>
+                (घ) दूसरों पर निर्भर रहें
+            </div>
+            <div class="correct">सही उत्तर — (ख) जिम्मेदार नागरिक बनें</div>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>🔖 त्वरित पुनरावृत्ति</h2>
+        <ul class="points">
+            <li>लेखक — कन्हैयालाल मिश्र 'प्रभाकर'</li>
+            <li>रचना की विधा — निबंध</li>
+            <li>मुख्य विषय — व्यक्ति और देश का संबंध</li>
+            <li>मुख्य विचार — देश का सम्मान नागरिक का सम्मान है</li>
+            <li>महत्वपूर्ण अवधारणाएँ — शक्ति-बोध और सौंदर्य-बोध</li>
+            <li>मुख्य संदेश — जिम्मेदार और जागरूक नागरिक बनना</li>
+        </ul>
+    </section>
+
+    <footer class="footer">
+        © Academix by Tiwari | Learn Smarter
+        <br>
+        कक्षा 9 हिंदी अध्ययन सामग्री
+    </footer>
+
+</div>
+
+</body>
+</html>
