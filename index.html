@@ -5476,56 +5476,41 @@ if (
        OPEN CHAPTER — ENGLISH + HINDI FILES
     ===================================================== */
 
-    openChapterBtn.addEventListener(
-        "click",
-        function() {
+openChapterBtn.addEventListener("click", function () {
 
-            const selectedClass =
-                classSelect.value;
+    const selectedChapter = chapterSelect.value;
 
-            const selectedSubject =
-                subjectSelect.value;
+    if (!selectedChapter) {
+        alert("कृपया पहले अध्याय चुनें।");
+        return;
+    }
 
-            const selectedChapter =
-                chapterSelect.value;
+    const chapterFile = hindiChapterFiles[selectedChapter];
 
-            if (
-                !selectedClass ||
-                !selectedSubject ||
-                !selectedChapter
-            ) {
-                return;
-            }
+    if (chapterFile) {
+        window.location.href = encodeURI(chapterFile);
+        return;
+    }
 
-            const subjectData =
-                curriculum[selectedClass]?.[selectedSubject];
-
-            if (!subjectData) {
-
-                alert("Subject nahi mila.");
-                return;
-
-            }
-
-
+    alert("इस अध्याय की फाइल अभी उपलब्ध नहीं है।");
+});
             /* =============================================
                HINDI + ENGLISH FILENAME GENERATOR
             ============================================= */
-
-            function makeChapterFilename(name) {
-
-                return name
-                    .trim()
-                    .normalize("NFC")
-                    .toLowerCase()
-                    .replace(/[’‘']/g, "")
-                    .replace(/[^\p{L}\p{N}]+/gu, "-")
-                    .replace(/^-+|-+$/g, "")
-                    + ".html";
-
-            }
-
-
+const hindiChapterFiles = {
+    "दो बैलों की कथा": "दो-बैलों-की-कथा.html",
+    "क्या लिखूँ?": "क्या-लिखूँ.html",
+    "संवादहीन": "संवादहीन.html",
+    "ऐसी भी बातें होती हैं (लता मंगेशकर से साक्षात्कार)": "ऐसी-भी-बातें-होती-हैं-लता-मंगेशकर-से-साक्षात्कार.html",
+    "आखिरी चट्टान तक": "आखिरी-चट्टान-तक.html",
+    "रीढ़ की हड्डी": "रीढ़-की-हड्डी.html",
+    "मैं और मेरा देश": "मैं-और-मेरा-देश.html",
+    "पद": "पद.html",
+    "राम-लक्ष्मण-परशुराम संवाद": "राम-लक्ष्मण-परशुराम-संवाद.html",
+    "भारत, जय, विजय करे!": "भारत-जय-विजय-करे.html",
+    "झाँसी की रानी": "झाँसी-की-रानी.html",
+    "घर की याद": "घर-की-याद.html"
+};
             /* =============================================
                GENERATE FILE PATH
             ============================================= */
