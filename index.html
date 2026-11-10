@@ -5345,57 +5345,84 @@ if (
 
 
 
-    /* =====================================================
-       SUBJECT → CHAPTER
-    ===================================================== */
+   
+/* =====================================================
+   SUBJECT → CHAPTER
+===================================================== */
 
-    subjectSelect.addEventListener(
-        "change",
-        function() {
+subjectSelect.addEventListener("change", function () {
 
-            const selectedClass =
-                classSelect.value;
+    const selectedClass = classSelect.value;
+    const selectedSubject = subjectSelect.value;
 
-            const selectedSubject =
-                subjectSelect.value;
+    resetSelect(chapterSelect, "Select Chapter");
 
+    chapterSelect.disabled = true;
+    openChapterBtn.disabled = true;
 
-            resetSelect(
-                chapterSelect,
-                "Select Chapter"
-            );
+    if (!selectedClass || !selectedSubject) return;
 
+    const subjectData =
+        curriculum[selectedClass][selectedSubject];
 
-            chapterSelect.disabled = true;
+    if (!subjectData) {
+        console.error("Subject not found:", selectedSubject);
+        return;
+    }
 
-            openChapterBtn.disabled = true;
+    // PARTS aur KHAND dono ko support karega
+    const chapterGroups =
+        subjectData.parts || subjectData.खंड;
 
+    if (chapterGroups) {
 
-            if (
-                !selectedClass ||
-                !selectedSubject
-            ) {
+        Object.entries(chapterGroups).forEach(
+            function ([groupName, chapters]) {
 
-                return;
+                const group = document.createElement("optgroup");
+                group.label = groupName;
+
+                chapters.forEach(function (chapter) {
+
+                    const option = document.createElement("option");
+
+                    option.value = chapter;
+                    option.textContent = chapter;
+                    option.dataset.part = groupName;
+
+                    group.appendChild(option);
+
+                });
+
+                chapterSelect.appendChild(group);
 
             }
+        );
 
+    }
 
-            const subjectData =
-                curriculum[selectedClass]
-                [selectedSubject];
+    // Normal chapters wale subjects
+    else if (Array.isArray(subjectData.chapters)) {
 
+        subjectData.chapters.forEach(function (chapter) {
 
-            if (!subjectData) {
+            const option = document.createElement("option");
 
-                console.error(
-                    "Academix: Subject not found:",
-                    selectedSubject
-                );
+            option.value = chapter;
+            option.textContent = chapter;
 
-                return;
+            chapterSelect.appendChild(option);
 
-            }
+        });
+
+    }
+
+    // Chapter dropdown enable
+    if (chapterSelect.options.length > 1) {
+        chapterSelect.disabled = false;
+    }
+
+});
 
 
 
