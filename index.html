@@ -5232,9 +5232,8 @@ const openChapterBtn =
     document.getElementById("openChapterBtn");
 
 
-
 /* =========================================================
-   5. CHECK ELEMENTS
+   5. LEARNING SELECTOR FUNCTIONALITY
 ========================================================= */
 
 if (
@@ -5263,13 +5262,11 @@ if (
             document.createElement("option");
 
         option.value = "";
-
         option.textContent = placeholder;
 
         select.appendChild(option);
 
     }
-
 
 
     /* =====================================================
@@ -5283,7 +5280,6 @@ if (
             const selectedClass =
                 classSelect.value;
 
-
             resetSelect(
                 subjectSelect,
                 "Select Subject"
@@ -5294,22 +5290,14 @@ if (
                 "Select Chapter"
             );
 
-
             subjectSelect.disabled = true;
-
             chapterSelect.disabled = true;
-
             openChapterBtn.disabled = true;
 
-
-            if (!selectedClass) {
-                return;
-            }
-
+            if (!selectedClass) return;
 
             const classData =
                 curriculum[selectedClass];
-
 
             if (!classData) {
 
@@ -5322,21 +5310,19 @@ if (
 
             }
 
-
-            Object.keys(classData)
-                .forEach(function(subject) {
+            Object.keys(classData).forEach(
+                function(subject) {
 
                     const option =
                         document.createElement("option");
 
                     option.value = subject;
-
                     option.textContent = subject;
 
                     subjectSelect.appendChild(option);
 
-                });
-
+                }
+            );
 
             subjectSelect.disabled = false;
 
@@ -5344,135 +5330,82 @@ if (
     );
 
 
+    /* =====================================================
+       SUBJECT → CHAPTER
+       SUPPORTS PARTS, KHAND AND NORMAL CHAPTERS
+    ===================================================== */
 
-   
-/* =====================================================
-   SUBJECT → CHAPTER
-===================================================== */
+    subjectSelect.addEventListener(
+        "change",
+        function() {
 
-subjectSelect.addEventListener("change", function () {
+            const selectedClass =
+                classSelect.value;
 
-    const selectedClass = classSelect.value;
-    const selectedSubject = subjectSelect.value;
+            const selectedSubject =
+                subjectSelect.value;
 
-    resetSelect(chapterSelect, "Select Chapter");
+            resetSelect(
+                chapterSelect,
+                "Select Chapter"
+            );
 
-    chapterSelect.disabled = true;
-    openChapterBtn.disabled = true;
+            chapterSelect.disabled = true;
+            openChapterBtn.disabled = true;
 
-    if (!selectedClass || !selectedSubject) return;
+            if (!selectedClass || !selectedSubject) {
+                return;
+            }
 
-    const subjectData =
-        curriculum[selectedClass][selectedSubject];
+            const subjectData =
+                curriculum[selectedClass]?.[selectedSubject];
 
-    if (!subjectData) {
-        console.error("Subject not found:", selectedSubject);
-        return;
-    }
+            if (!subjectData) {
 
-    // PARTS aur KHAND dono ko support karega
-    const chapterGroups =
-        subjectData.parts || subjectData.खंड;
+                console.error(
+                    "Academix: Subject not found:",
+                    selectedSubject
+                );
 
-    if (chapterGroups) {
-
-        Object.entries(chapterGroups).forEach(
-            function ([groupName, chapters]) {
-
-                const group = document.createElement("optgroup");
-                group.label = groupName;
-
-                chapters.forEach(function (chapter) {
-
-                    const option = document.createElement("option");
-
-                    option.value = chapter;
-                    option.textContent = chapter;
-                    option.dataset.part = groupName;
-
-                    group.appendChild(option);
-
-                });
-
-                chapterSelect.appendChild(group);
+                return;
 
             }
-        );
-
-    }
-
-    // Normal chapters wale subjects
-    else if (Array.isArray(subjectData.chapters)) {
-
-        subjectData.chapters.forEach(function (chapter) {
-
-            const option = document.createElement("option");
-
-            option.value = chapter;
-            option.textContent = chapter;
-
-            chapterSelect.appendChild(option);
-
-        });
-
-    }
-
-    // Chapter dropdown enable
-    if (chapterSelect.options.length > 1) {
-        chapterSelect.disabled = false;
-    }
-
-});
-
 
 
             /* =============================================
-               SUBJECT WITH PARTS
+               PARTS + KHAND SUPPORT
             ============================================= */
 
-            if (subjectData.parts) {
+            const chapterGroups =
+                subjectData.parts || subjectData.खंड;
 
-                Object.entries(
-                    subjectData.parts
-                ).forEach(
-                    function([partName, chapters]) {
+            if (chapterGroups) {
+
+                Object.entries(chapterGroups).forEach(
+                    function([groupName, chapters]) {
 
                         const group =
-                            document.createElement(
-                                "optgroup"
-                            );
+                            document.createElement("optgroup");
 
-                        group.label = partName;
-
+                        group.label = groupName;
 
                         chapters.forEach(
                             function(chapter) {
 
                                 const option =
-                                    document.createElement(
-                                        "option"
-                                    );
+                                    document.createElement("option");
 
-                                option.value =
-                                    chapter;
+                                option.value = chapter;
+                                option.textContent = chapter;
 
-                                option.textContent =
-                                    chapter;
+                                option.dataset.part = groupName;
 
-                                option.dataset.part =
-                                    partName;
-
-                                group.appendChild(
-                                    option
-                                );
+                                group.appendChild(option);
 
                             }
                         );
 
-
-                        chapterSelect.appendChild(
-                            group
-                        );
+                        chapterSelect.appendChild(group);
 
                     }
                 );
@@ -5480,34 +5413,22 @@ subjectSelect.addEventListener("change", function () {
             }
 
 
-
             /* =============================================
-               SUBJECT WITHOUT PARTS
+               NORMAL CHAPTER SUPPORT
             ============================================= */
 
-            else if (
-                Array.isArray(
-                    subjectData.chapters
-                )
-            ) {
+            else if (Array.isArray(subjectData.chapters)) {
 
                 subjectData.chapters.forEach(
                     function(chapter) {
 
                         const option =
-                            document.createElement(
-                                "option"
-                            );
+                            document.createElement("option");
 
-                        option.value =
-                            chapter;
+                        option.value = chapter;
+                        option.textContent = chapter;
 
-                        option.textContent =
-                            chapter;
-
-                        chapterSelect.appendChild(
-                            option
-                        );
+                        chapterSelect.appendChild(option);
 
                     }
                 );
@@ -5515,22 +5436,25 @@ subjectSelect.addEventListener("change", function () {
             }
 
 
-
             /* =============================================
-               ENABLE CHAPTER
+               ENABLE CHAPTER DROPDOWN
             ============================================= */
 
-            if (
-                chapterSelect.options.length > 1
-            ) {
+            if (chapterSelect.options.length > 1) {
 
                 chapterSelect.disabled = false;
+
+            } else {
+
+                console.warn(
+                    "Academix: No chapters found for",
+                    selectedSubject
+                );
 
             }
 
         }
     );
-
 
 
     /* =====================================================
@@ -5548,48 +5472,78 @@ subjectSelect.addEventListener("change", function () {
     );
 
 
+    /* =====================================================
+       OPEN CHAPTER — ENGLISH + HINDI FILES
+    ===================================================== */
 
-    
+    openChapterBtn.addEventListener(
+        "click",
+        function() {
 
-/* =====================================================
-   OPEN CHAPTER — ALL CLASSES & SUBJECTS
-===================================================== */
+            const selectedClass =
+                classSelect.value;
 
-openChapterBtn.addEventListener("click", function () {
+            const selectedSubject =
+                subjectSelect.value;
 
-    const selectedClass = classSelect.value;
-    const selectedSubject = subjectSelect.value;
-    const selectedChapter = chapterSelect.value;
+            const selectedChapter =
+                chapterSelect.value;
 
-    if (!selectedClass || !selectedSubject || !selectedChapter) {
-        return;
-    }
+            if (
+                !selectedClass ||
+                !selectedSubject ||
+                !selectedChapter
+            ) {
+                return;
+            }
 
-    const subjectData =
-        curriculum[selectedClass]?.[selectedSubject];
+            const subjectData =
+                curriculum[selectedClass]?.[selectedSubject];
 
-    if (!subjectData) {
-        alert("Subject nahi mila.");
-        return;
-    }
+            if (!subjectData) {
 
-    // Convert chapter name into its HTML filename
-  
-function makeChapterFilename(name) {
-    return name
-        .trim()
-        .replace(/[^\p{L}\p{N}]+/gu, "-")
-        .replace(/^-+|-+$/g, "")
-        + ".html";
-}
+                alert("Subject nahi mila.");
+                return;
 
-    // Generate the chapter filename
-    const chapterFile = makeChapterFilename(selectedChapter);
+            }
 
-    // All classes and subjects open individual chapter files
-    window.location.href = chapterFile;
 
-});
+            /* =============================================
+               HINDI + ENGLISH FILENAME GENERATOR
+            ============================================= */
+
+            function makeChapterFilename(name) {
+
+                return name
+                    .trim()
+                    .normalize("NFC")
+                    .toLowerCase()
+                    .replace(/[’‘']/g, "")
+                    .replace(/[^\p{L}\p{N}]+/gu, "-")
+                    .replace(/^-+|-+$/g, "")
+                    + ".html";
+
+            }
+
+
+            /* =============================================
+               GENERATE FILE PATH
+            ============================================= */
+
+            const chapterFile =
+                makeChapterFilename(selectedChapter);
+
+
+            /* =============================================
+               OPEN CHAPTER
+            ============================================= */
+
+            window.location.href =
+                encodeURI(chapterFile);
+
+        }
+    );
+
 }
 
 
