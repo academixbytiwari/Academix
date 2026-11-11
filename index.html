@@ -5472,28 +5472,98 @@ if (
     );
 
 
-    /* =====================================================
-       OPEN CHAPTER — ENGLISH + HINDI FILES
-    ===================================================== */
+ 
+/* =====================================================
+   OPEN CHAPTER — ALL CLASSES AND SUBJECTS
+===================================================== */
 
-openChapterBtn.addEventListener("click", function () {
+const hindiChapterFiles = {
 
-    const selectedChapter = chapterSelect.value;
+    /* CLASS 8 HINDI */
+    "chapter1": "chapter1.html",
+    "chapter2": "chapter2.html",
+    "chapter3": "chapter3.html",
+    "chapter4": "chapter4.html",
+    "chapter5": "chapter5.html",
+    "chapter6": "chapter6.html",
+    "chapter7": "chapter7.html",
+    "chapter8": "chapter8.html",
+    "chapter9": "chapter9.html",
+    "chapter10": "chapter10.html",
 
-    if (!selectedChapter) {
-        alert("कृपया पहले अध्याय चुनें।");
-        return;
-    }
+    /* CLASS 9 HINDI — EXISTING MAPPING */
+    "दो बैलों की कथा": "दो-बैलों-की-कथा.html",
+    "क्या लिखूँ?": "क्या-लिखूँ.html",
+    "संवादहीन": "संवादहीन.html",
+    "ऐसी भी बातें होती हैं (लता मंगेशकर से साक्षात्कार)": "ऐसी-भी-बातें-होती-हैं-लता-मंगेशकर-से-साक्षात्कार.html",
+    "आखिरी चट्टान तक": "आखिरी-चट्टान-तक.html",
+    "रीढ़ की हड्डी": "रीढ़-की-हड्डी.html",
+    "मैं और मेरा देश": "मैं-और-मेरा-देश.html",
+    "पद": "पद.html",
+    "राम-लक्ष्मण-परशुराम संवाद": "राम-लक्ष्मण-परशुराम-संवाद.html",
+    "भारत, जय, विजय करे": "भारत-जय-विजय-करे.html",
+    "झाँसी की रानी": "झाँसी-की-रानी.html",
+    "घर की याद": "घर-की-याद.html",
 
-    const chapterFile = hindiChapterFiles[selectedChapter];
+    /* CLASS 8 MATHS */
+    "A Square and a Cube": null,
+    "Power Play": null,
+    "A Story of Numbers": null,
+    "Quadrilaterals": "math-quadrilateral.html",
+    "Number Play": null,
+    "We Distribute, Yet We Care": null,
+    "Proportional Reasoning-1": null,
+    "Fractions in Disguise": null,
+    "Proportional Reasoning-2": null,
+    "Exploring Some Geometrical Figures": null,
+    "Four Sides and More": null,
+    "Area": null,
+    "Data Handling": null,
+    "The Universe of Shapes": null,
 
-    if (chapterFile) {
+    /* CLASS 9 MATHS */
+    "Orienting Yourself: The Use of Coordinates": "orienting-yourself-the-use-of-coordinates.html",
+    "Introduction to Linear Polynomials": "introduction-to-linear-polynomials.html",
+    "The World of Numbers": "the-world-of-numbers.html",
+    "Exploring Algebraic Identities": null,
+    "I'm Up and Down, and Round and Round": "im-up-and-down-and-round-and-round.html",
+    "Measuring Space: Perimeter and Area": "measuring-space-perimeter-and-area.html",
+    "The Mathematics of Maybe: Introduction to Probability": "the-mathematics-of-maybe-introduction-to-probability.html",
+    "Predicting What Comes Next: Exploring Sequences and Progressions": "predicting-what-comes-next-exploring-sequences-and-progressions.html",
+    "Propositions and their Converses": "propositions-and-their-converses.html",
+    "How Quantities Combine: Understanding Data": "how-quantities-combine-understanding-data.html",
+    "The World of Algorithms": "the-world-of-algorithms.html",
+    "Two Variables, One Line": null,
+    "Math of Space: Surface Area and Volume": null
+};
+
+
+/* OPEN CHAPTER */
+
+if (openChapterBtn) {
+
+    openChapterBtn.addEventListener("click", function () {
+
+        const selectedChapter = chapterSelect.value;
+
+        if (!selectedChapter) {
+            alert("कृपया पहले अध्याय चुनें।");
+            return;
+        }
+
+        const chapterFile = hindiChapterFiles[selectedChapter];
+
+        if (!chapterFile) {
+            alert("इस अध्याय की HTML फाइल अभी उपलब्ध नहीं है।");
+            return;
+        }
+
         window.location.href = encodeURI(chapterFile);
-        return;
-    }
 
-    alert("इस अध्याय की फाइल अभी उपलब्ध नहीं है।");
-});
+    });
+
+}
+
             /* =============================================
                HINDI + ENGLISH FILENAME GENERATOR
             ============================================= */
