@@ -5472,11 +5472,9 @@ if (
     );
 
 
- 
-
-/* =====================================================
-   OPEN CHAPTER — CLASS + SUBJECT + CHAPTER MAPPING
-===================================================== */
+/* =========================================================
+   6. CHAPTER OPENING — CLASS + SUBJECT + CHAPTER
+========================================================= */
 
 const chapterFiles = {
 
@@ -5496,9 +5494,7 @@ const chapterFiles = {
             "chapter10": "chapter10.html"
         },
 
-        "Mathematics Solutions": {
-            /* Add verified Class 8 Maths filenames here */
-        }
+        "Mathematics Solutions": {}
 
     },
 
@@ -5506,6 +5502,7 @@ const chapterFiles = {
     "9": {
 
         "Hindi Solutions": {
+
             "दो बैलों की कथा": "दो-बैलों-की-कथा.html",
             "क्या लिखूँ?": "क्या-लिखूँ.html",
             "संवादहीन": "संवादहीन.html",
@@ -5518,9 +5515,11 @@ const chapterFiles = {
             "भारत, जय, विजय करे": "भारत-जय-विजय-करे.html",
             "झाँसी की रानी": "झाँसी-की-रानी.html",
             "घर की याद": "घर-की-याद.html"
+
         },
 
         "Mathematics Solutions": {
+
             "Orienting Yourself: The Use of Coordinates": "orienting-yourself-the-use-of-coordinates.html",
             "Introduction to Linear Polynomials": "introduction-to-linear-polynomials.html",
             "The World of Numbers": "the-world-of-numbers.html",
@@ -5534,6 +5533,7 @@ const chapterFiles = {
             "Quadrilaterals": "math-quadrilateral.html",
             "Two Variables, One Line": "math-linear-equation.html",
             "Math of Space: Surface Area and Volume": "math-surface-areas.html"
+
         }
 
     }
@@ -5541,9 +5541,9 @@ const chapterFiles = {
 };
 
 
-/* =====================================================
-   CHAPTER OPEN BUTTON
-===================================================== */
+/* =========================================================
+   OPEN SELECTED CHAPTER
+========================================================= */
 
 openChapterBtn.addEventListener("click", function () {
 
@@ -5552,22 +5552,39 @@ openChapterBtn.addEventListener("click", function () {
     const selectedChapter = chapterSelect.value;
 
     if (!selectedClass || !selectedSubject || !selectedChapter) {
-        alert("Please select Class, Subject and Chapter first.");
+
+        alert("Please select your class, subject and chapter.");
         return;
+
     }
 
-    const chapterFile =
-        chapterFiles[selectedClass]?.[selectedSubject]?.[selectedChapter];
+    const classFiles = chapterFiles[selectedClass];
 
-    if (chapterFile) {
-        window.location.href = encodeURI(chapterFile);
-    } else {
-        alert("Is chapter ki HTML file abhi mapping mein available nahi hai.");
+    const subjectFiles = classFiles
+        ? classFiles[selectedSubject]
+        : null;
+
+    const chapterFile = subjectFiles
+        ? subjectFiles[selectedChapter]
+        : null;
+
+    if (!chapterFile) {
+
+        alert(
+            "This chapter's individual file is not available yet."
+        );
+
+        return;
+
     }
+
+    window.location.href = encodeURI(chapterFile);
 
 });
 
-/* =========================================================
+ 
+
+=================================================
    6. DARK / LIGHT THEME
 ========================================================= */
 
